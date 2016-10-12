@@ -12,7 +12,7 @@
     var vm;
     var el;
 
-    beforeEach(module('gulpAngular'));
+    beforeEach(module('asset'));
     beforeEach(inject(function($compile, $rootScope, githubContributor, $q, _$log_) {
       $log = _$log_;
 

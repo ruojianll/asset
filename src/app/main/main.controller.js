@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('gulpAngular')
+    .module('asset')
     .controller('MainController', MainController);
 
   /** @ngInject */
@@ -11,7 +11,7 @@
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
-    vm.creationDate = 1475998823119;
+    vm.creationDate = 1476238770929;
     vm.showToastr = showToastr;
 
     activate();

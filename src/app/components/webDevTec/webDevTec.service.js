@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-      .module('gulpAngular')
+      .module('asset')
       .service('webDevTec', webDevTec);
 
   /** @ngInject */
