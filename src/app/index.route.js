@@ -1,23 +1,7 @@
-// (function() {
-//   'use strict';
-
-//   angular
-//     .module('gulpAngular')
-//     .config(routerConfig);
-
-//   /** @ngInject */
-//   function routerConfig($stateProvider, $urlRouterProvider) {
-    
-//     $stateProvider
-//       .state('home', {
-//         url: '/',
-//         templateUrl: 'app/template/home.template.html',
-//         controller: 'homeCtrl'
-// //      controllerAs: 'main'
-//       });
-
-//     $urlRouterProvider.otherwise('/');
-    
-//   }
-
-// })();
+// angular.module('asset',['ui.router']).config(function($stateProvider,$urlRouterProvider){
+// 	$urlRouterProvider.when('','/login/user')
+// 	$stateProvider.state('login',{
+// 		url:'/Eayic/:name',
+// 		templateUrl:'app/template/login.html'
+// 	})
+// })

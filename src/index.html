@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="gulpAngular">
+<html ng-app="asset">
   <head>
     <meta charset="utf-8">
     <title>Asset</title>
@@ -28,10 +28,12 @@
         <a href="index.html"><img src="../assets/images/logo.jpg"></a>
         <div class="user">
             <span>未登录</span>
-            <span class="minute">登录</span>
+            <a class="minute" ui-sref='log'>登录</a>
         </div>
     </div>
-    <div class="body" ui-view></div>
+    <div class="body" ui-view>
+        
+    </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

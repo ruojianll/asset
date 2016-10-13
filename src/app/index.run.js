@@ -1,8 +1,7 @@
 (function() {
   'use strict';
-
   angular
-    .module('gulpAngular')
+    .module('asset')
     .run(runBlock);
 
   /** @ngInject */

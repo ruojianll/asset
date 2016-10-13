@@ -1,4 +1,4 @@
-angular.module('gulpAngular').service('dengLu',function(user,$http,apiServ){
+angular.module('asset').service('dengLu',function(user,$http,apiServ){
     var login = function(){
     apiServ.post(user.host+'/api/account/login',{user_name:user.username,password:user.password}).then(
         function(data){
@@ -21,7 +21,7 @@ angular.module('gulpAngular').service('dengLu',function(user,$http,apiServ){
         'logout':logout
     }
 });
-angular.module('gulpAngular').service('apiServ',function($http,user,$q){
+angular.module('asset').service('apiServ',function($http,user,$q){
     var handle = function(url,data,type){
         // url = user.host + url ;
         var deferred = $q.defer();
