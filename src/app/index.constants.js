@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('asset')
+    .module('gulpAngular')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 

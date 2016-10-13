@@ -1,8 +1,8 @@
 <!doctype html>
-<html ng-app="asset">
+<html ng-app="gulpAngular">
   <head>
     <meta charset="utf-8">
-    <title>asset</title>
+    <title>Asset</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -23,8 +23,15 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div ui-view></div>
+    <div class="login"></div>
+    <div class="content">
+        <a href="index.html"><img src="../assets/images/logo.jpg"></a>
+        <div class="user">
+            <span>未登录</span>
+            <span class="minute">登录</span>
+        </div>
+    </div>
+    <div class="body" ui-view></div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
