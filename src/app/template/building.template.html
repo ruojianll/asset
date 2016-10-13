@@ -1,0 +1,44 @@
+<div class="XQbuilding">
+	<div class="XQinfo">
+		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb">
+			<tr height="37" class="XQhead">
+				<td width="40">id</td>
+				<td width="80">name</td>
+				<td width="105">location</td>
+			</tr>
+			<tr height="37" style="background:#f9f9f9;">
+				<td width="40">1</td>
+				<td width="80">1</td>
+				<td width="105">1</td>
+			</tr>
+		</table>
+		<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
+	</div>
+	<div class="XQedit">
+		<div class="form-group">
+	      <label>Name</label>
+	      <input type="text" ng-model="ngModelOptionsSelected" ng-model-options="modelOptions" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+	    </div>
+	    <div class="form-group">
+	      <label>Location</label>
+	      <input type="text" ng-model="ngModelOptionsSelected" ng-model-options="modelOptions" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+	    </div>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Edit</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Delete</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Create</button>
+	</div>
+	<div class="XQlist">
+		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb">
+			<tr height="37" class="XQhead">
+				<td width="185">id</td>
+				<td width="275">Code</td>
+			</tr>
+			<tr height="37" style="background:#f9f9f9;">
+				<td width="185">1</td>
+				<td width="275">1</td>
+			</tr>
+		</table>
+	</div>
+</div>
+	
+

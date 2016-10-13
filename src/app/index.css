@@ -12,3 +12,55 @@
 .thumbnail img.pull-right {
   width: 50px;
 }
+*{margin:0;padding:0;}
+body{
+	background: url(img/bg.png);
+	background-size: cover;
+}
+.XQbuilding{
+	width:90%;
+	margin: 0 auto;
+}
+.XQinfo{
+	width:251px;
+	height:208px;
+	background: #f2e7e5;
+	padding: 10px;
+	float: left;
+}
+.XQhead{
+	background: #fff;
+}
+.XQinfo table tr td{
+	padding-left:10px;
+	font-weight: bold;
+}
+
+.XQedit{
+	width: 500px;
+	height:208px;
+	background: #f2e7e5;
+	float: left;
+	margin-left: 5px;
+	padding: 10px;
+}
+.form-group{
+
+}
+.btn-default{
+	margin-top:4px;
+	margin-left: 5px; 
+}
+
+.XQlist{
+	width:400px; 
+	height:125px;
+	float: left;
+	margin-left: 5px;
+	background: #f2e7e5;
+	padding: 10px;
+}
+.XQlist table tr td{
+	padding-left: 10px;
+	font-weight: bold;
+}
