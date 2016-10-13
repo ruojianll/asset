@@ -12,3 +12,31 @@
 .thumbnail img.pull-right {
   width: 50px;
 }
+
+
+
+.fx {
+	width: 376px;
+	min-height: 208px;
+	box-sizing: border-box;
+	padding: 10px;
+	background: #f7e8e3;
+	opacity: 0.3;
+}
+.box{
+	width:501px;
+	height:378px;
+	background:#f7e8e3;
+	padding:16px 11px;
+	opacity: 0.3;
+}
+.box .form-group{
+	margin-bottom:8px;
+}
+.box label{
+	margin-bottom: 0px;
+}
+
+.box .btn{
+	margin-top: 5px;
+}
