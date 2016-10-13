@@ -1,21 +1,23 @@
-(function() {
-  'use strict';
+// (function() {
+//   'use strict';
 
-  angular
-    .module('asset')
-    .config(routerConfig);
+//   angular
+//     .module('gulpAngular')
+//     .config(routerConfig);
 
-  /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      });
+//   /** @ngInject */
+//   function routerConfig($stateProvider, $urlRouterProvider) {
+    
+//     $stateProvider
+//       .state('home', {
+//         url: '/',
+//         templateUrl: 'app/template/home.template.html',
+//         controller: 'homeCtrl'
+// //      controllerAs: 'main'
+//       });
 
-    $urlRouterProvider.otherwise('/');
-  }
+//     $urlRouterProvider.otherwise('/');
+    
+//   }
 
-})();
+// })();
