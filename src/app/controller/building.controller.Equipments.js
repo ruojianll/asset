@@ -6,11 +6,11 @@ angular.module("asset").controller("Equipments",function($scope,$http,environmen
 //获取所有设备
 	$http.post(environment.host+'/eqp/api/equipment/all').then(
 		function (data){
-			alert(1)
+			//alert(1)
 			//console.log(data);
 		},
 		function (err){
-			alert(2)
+			//alert(2)
 			//console.log(err);
 		}
 	);
