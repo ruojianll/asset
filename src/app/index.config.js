@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('asset')
+    .module('gulpAngular')
     .config(config);
 
   /** @ngInject */
