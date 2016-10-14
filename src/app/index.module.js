@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('gulpAngular', ['ui.router', 'ui.bootstrap', 'toastr']);
+    .module('asset', ['ui.router', 'ui.bootstrap', 'toastr']);
 
 })();

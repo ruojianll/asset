@@ -12,56 +12,40 @@
 .thumbnail img.pull-right {
   width: 50px;
 }
-<<<<<<< HEAD
-*{margin:0;padding:0;}
-body{
-	background-image: url(img/bg.png);
-=======
-<<<<<<< HEAD
+
 *{margin:0;padding:0;}
 body{
 	background: url(img/bg.png);
->>>>>>> 28002f9a22d81fe40883d1125a9c77b63e1ce19b
 	background-size: cover;
 }
+
 .XQbuilding{
 	width:90%;
 	margin: 0 auto;
 }
 .XQinfo{
 	width:251px;
-	height:208px;
+	max-height:300px;
 	background: #f2e7e5;
 	padding: 10px;
 	float: left;
+	overflow: auto;
 }
+.XQinfo table{
+  background-color: #fff;
+}
+
 .XQhead{
-<<<<<<< HEAD
-	width:226px;
-	height:37px;
-	border:1px solid #e0dcdb;
-	list-style: none;
 	background: #fff;
 }
-.XQhead li{
-	padding:0 29px 0 9px;
-	text-align: center;
-	float: left;
-	line-height: 37px;
-	border-right: 1px solid #e0dcdb;
-	font-weight: bold;
-}
 
-
-=======
-	background: #fff;
-}
 .XQinfo table tr td{
 	padding-left:10px;
-	font-weight: bold;
+}
+.XQinfo table thead {
+  font-weight: bold;
 }
 
->>>>>>> 28002f9a22d81fe40883d1125a9c77b63e1ce19b
 .XQedit{
 	width: 500px;
 	height:208px;
@@ -86,27 +70,16 @@ body{
 	background: #f2e7e5;
 	padding: 10px;
 }
-<<<<<<< HEAD
-.XQlist ul{
-	width:380px;
-	height:37px;
-	border:1px solid #e0dcdb;
-	list-style: none;
+.XQlist table tbody {
+  background-color: #fff;
 }
-.XQlist ul li{
-	padding:0 157px 0 9px;
-	text-align: center;
-	float: left;
-	line-height: 37px;
-	border-right: 1px solid #e0dcdb;
-	background: #fff;
+.XQlist table thead {
+  font-weight: bold;
 }
-=======
+
 .XQlist table tr td{
 	padding-left: 10px;
-	font-weight: bold;
 }
-=======
 body{
 	display: block;
 	width: 100%;
@@ -163,25 +136,3 @@ body{
 	line-height: 30px;
 	text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 16f85b68002630567598efc741bfc83ff5f725c7
->>>>>>> 28002f9a22d81fe40883d1125a9c77b63e1ce19b

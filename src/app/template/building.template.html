@@ -1,70 +1,54 @@
 <div class="XQbuilding">
 	<div class="XQinfo">
-<<<<<<< HEAD
-		<ul class="XQhead">
-			<li>id</li>
-			<li>name</li>
-			<li style="border-right:none;">location</li>
-		</ul>
-		<!--<ul>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-			<li>1</li>
-		</ul>-->
-		 <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
-=======
-		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb">
-			<tr height="37" class="XQhead">
-				<td width="40">id</td>
-				<td width="80">name</td>
-				<td width="105">location</td>
-			</tr>
-			<tr height="37" style="background:#f9f9f9;">
-				<td width="40">1</td>
-				<td width="80">1</td>
-				<td width="105">1</td>
-			</tr>
+		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb" id="example" class='table table-hover'>
+			<thead height="37" class="XQhead">
+			  <tr>
+			    <td width="40">id</td>
+  				<td width="80">name</td>
+  				<td width="105">location</td>
+			  </tr>
+				
+			</thead>
+			<tbody>
+			  <tr height="37" ng-repeat = 'i in data1' ng-click = '_show($index)'>
+  				<td width="40">{{i.id}}</td>
+  				<td width="80">{{i.name}}</td>
+  				<td width="105">{{i.location}}</td>
+  			</tr>
+			</tbody>
+			
 		</table>
 		<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
->>>>>>> 28002f9a22d81fe40883d1125a9c77b63e1ce19b
 	</div>
 	<div class="XQedit">
 		<div class="form-group">
 	      <label>Name</label>
-	      <input type="text" ng-model="ngModelOptionsSelected" ng-model-options="modelOptions" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+	      <input type="text" class="form-control" ng-model = 'custom.name' value = '{{custom.name}}'>
 	    </div>
 	    <div class="form-group">
 	      <label>Location</label>
-	      <input type="text" ng-model="ngModelOptionsSelected" ng-model-options="modelOptions" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+	      <input type="text" class="form-control" ng-model = 'custom.location' value = '{{custom.location}}'>
 	    </div>
-	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Edit</button>
-	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Delete</button>
-	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Create</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_edit()'>Edit</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_delete()'>Delete</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_create()'>Create</button>
 	</div>
-	<div class="XQlist">
-<<<<<<< HEAD
-		<ul>
-			<li>id</li>
-			<li style="border-right:none;">Code</li>
-		</ul>
-=======
-		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb">
-			<tr height="37" class="XQhead">
-				<td width="185">id</td>
-				<td width="275">Code</td>
-			</tr>
-			<tr height="37" style="background:#f9f9f9;">
-				<td width="185">1</td>
-				<td width="275">1</td>
-			</tr>
+	<div class="XQlist" ng-show = 'qq'>
+		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb" class="table table-bordered">
+		  <thead height="37" class="XQhead">
+		    <tr>
+  				<td width="185">id</td>
+  				<td width="275">Code</td>
+  			</tr>
+		  </thead>
+			<tbody>
+			  <tr height="37" ng-repeat = 'i in data2'>
+  				<td width="185">{{i.id}}</td>
+  				<td width="275">{{i.code}}</td>
+  			</tr>
+			</tbody>
+			
 		</table>
->>>>>>> 28002f9a22d81fe40883d1125a9c77b63e1ce19b
 	</div>
 </div>
 	
