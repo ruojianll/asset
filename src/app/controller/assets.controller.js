@@ -1,5 +1,5 @@
 angular.module('asset').controller('assetsController',function($scope,environment,$http,accountServ,apiServ){
-	accountServ.login('luchengqian','123456');
+	accountServ.login('lizexin','123456');
 	// accountServ.logout();
 	apiServ.post('/eqp/api/building/all',{}).then(function(data){
 		console.log(data);
@@ -27,8 +27,11 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		})
 	}
 	$scope.show3=function($index){
-		$scope.flag2=true;
-		var room_id=$('.main div:eq(1) tr').eq($index+1).attr('id');
+		
+		var name=$('.main div:eq(2) tr').eq($index+1).find('td:eq(1)').html();
+		$('#name').val(name);
+		var num=$('.main div:eq(2) tr').eq($index+1).find('td:eq(4)').html();
+		$('#num').val(num);
 		apiServ.post('/eqp/api/asset/get',{room_id:room_id}).then(function(data){
 			console.log(data);
 			$scope.equipments=data;

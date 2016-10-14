@@ -55,13 +55,13 @@
 		</table>
 		<div>
 			<h5>Equipment</h5>
-		    <input type="text" class="form-control" ng-focus="focus()" ng-model="f" id="focus">
+		    <input type="text" class="form-control" ng-focus="focus()" ng-model="f" id="name">
 			<ul class="dropdown-menu" ng-show="flag3">
 				<li ng-repeat="i in states | filter:f">{{i}}</li>
 			</ul>
 
 		    <h5>number</h5>
-		    <input type="text" ng-model="selected" class="form-control">
+		    <input type="text" ng-model="selected" class="form-control" id="num">
 
 		    <button type="button" class="btn btn-default" ng-click="$ctrl.open()">Edit(:)</button>     
 		    <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Delete(:)</button>
