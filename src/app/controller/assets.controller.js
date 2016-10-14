@@ -1,5 +1,5 @@
 angular.module('asset').controller('assetsController',function($scope,environment,$http,accountServ,apiServ){
-	accountServ.login('lizexin','123456');
+	// accountServ.login('lizexin','123456');
 	// accountServ.logout();
 	apiServ.post('/eqp/api/building/all',{}).then(function(data){
 		console.log(data);
