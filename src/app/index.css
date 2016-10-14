@@ -151,3 +151,33 @@ body{
 .tmp span{
 	cursor: pointer;
 }
+.menu{
+	width: 70%;
+	height: auto;
+	margin: 2% auto;
+}
+.menu a{
+	display: inline-block;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	padding: 0 1rem;
+	color: blue;
+	background: transparent;
+	text-decoration: none;
+	border-radius: 10% 10% 0 0;
+	float: left;
+	margin: 0 0.5rem;
+}
+.menu a.active{
+	background: #fff;
+	color: #333;
+}
+.menu a:hover{
+	background: #fff;
+	color: #333;
+}
+.menu>div{
+	clear: both;
+	padding-top: 2rem;
+}
