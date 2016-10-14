@@ -1,27 +1,3 @@
-//angular.module('gulpAngular')
-//.service('accountServ',function(environment,$http){
-//
-//  var login = function(){
-//
-//      $http.post(environment.host+'/api/account/login',{user_name:environment.username,password:environment.password}).then(
-//      function(data){
-//          console.log(data);
-//      },
-//      function(err){
-//          console.log(err);
-//      }
-//      );
-//
-//  }
-//
-//  return {
-//      'login':login
-//  }
-//});
-
-
-
-
 angular.module('asset').service('accountServ',function(environment,$http,apiServ,$state){
     var login = function(){
     	// alert(1)

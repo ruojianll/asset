@@ -25,7 +25,7 @@
         url:"/rooms",
         templateUrl:'app/template/rooms.template.html'
       })
-    $urlRouterProvider.otherwise('signIn.assets');
+    // $urlRouterProvider.otherwise('signIn.assets');
   }
   
 })();
