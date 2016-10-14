@@ -10,9 +10,9 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        templateUrl: 'app/template/rooms.template.html',  //改变文件index的路径
+        controller: 'jxrooms'
+        // controllerAs: 'main'
       });
 
     $urlRouterProvider.otherwise('/');
