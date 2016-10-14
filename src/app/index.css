@@ -12,7 +12,7 @@
 .thumbnail img.pull-right {
   width: 50px;
 }
-<<<<<<< HEAD
+
 *{margin:0;padding:0;}
 body{
 	background: url(img/bg.png);
@@ -24,10 +24,13 @@ body{
 }
 .XQinfo{
 	width:251px;
-	height:208px;
+	height:auto;
 	background: #f2e7e5;
 	padding: 10px;
 	float: left;
+}
+.XQinfo ul{
+	margin: 40px auto;
 }
 .XQhead{
 	background: #fff;
@@ -55,7 +58,7 @@ body{
 
 .XQlist{
 	width:400px; 
-	height:125px;
+	height:auto;
 	float: left;
 	margin-left: 5px;
 	background: #f2e7e5;
@@ -64,14 +67,6 @@ body{
 .XQlist table tr td{
 	padding-left: 10px;
 	font-weight: bold;
-}
-=======
-body{
-	display: block;
-	width: 100%;
-	height: 100vh;
-	background: url(../assets/images/bg.png) no-repeat;
-	background-size: cover;
 }
 .login{
 	width: 100%;
@@ -139,7 +134,3 @@ body{
 
 
 
-
-
-
->>>>>>> 16f85b68002630567598efc741bfc83ff5f725c7
