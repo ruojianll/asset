@@ -6,14 +6,14 @@
     .config(routerConfig);
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
-<<<<<<< HEAD
+/*<<<<<<< HEAD
     $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'app/template/assets.template.html',
         controller: 'assetsController'
       });
-=======
+=======*/
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'app/template/login2.template.html',
