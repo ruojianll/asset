@@ -1,8 +1,7 @@
 
 // 建筑 building;
 angular.module("asset").controller("budCtrl", function (accountServ, $scope, environment, apiServ) {
-//accountServ.login()
-//accountServ.logout()
+
   getBud()
   
   // 获取建筑；

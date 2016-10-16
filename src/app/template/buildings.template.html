@@ -1,4 +1,4 @@
-<div class="XQbuilding">
+<div class="XQbuilding" ng-controller = "budCtrl">
 	<div class="XQinfo">
 		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb" id="example" class='table table-hover'>
 			<thead height="37" class="XQhead">
@@ -7,7 +7,6 @@
   				<td width="80">name</td>
   				<td width="105">location</td>
 			  </tr>
-				
 			</thead>
 			<tbody>
 			  <tr height="37" ng-repeat = 'i in data1' ng-click = '_show($index)'>
@@ -16,7 +15,6 @@
   				<td width="105">{{i.location}}</td>
   			</tr>
 			</tbody>
-			
 		</table>
 		<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
 	</div>
@@ -47,7 +45,6 @@
   				<td width="275">{{i.code}}</td>
   			</tr>
 			</tbody>
-			
 		</table>
 	</div>
 </div>

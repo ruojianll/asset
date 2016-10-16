@@ -6,3 +6,4 @@ angular.module("asset").constant(
     'password': 123456
   }
 )
+
