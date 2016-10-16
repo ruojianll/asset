@@ -1,5 +1,5 @@
 angular.module("asset").controller("budCtrl",function ($scope,$http,accountServ,apiServ,environment){
-	accountServ.login("lijing","123456");
+	// accountServ.login("lijing","123456");
     // accountServ.logout();
 	// accountServ.newbuilding();
 	// $scope.show=function($index){
