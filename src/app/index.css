@@ -57,6 +57,12 @@ body{
 	left:0;
 }
 
+
+.XQbuilding{
+	width:100%;
+	height: auto;
+	overflow: hidden;
+}
 .tit{
 	width:1200px;
 	height:52px;
@@ -89,6 +95,30 @@ header div {
 	margin: 0 auto;
 	height: 100%
 }
+
+.XQinfo{
+	width:251px;
+	max-height:300px;
+	background: #f2e7e5;
+	padding: 10px;
+	float: left;
+	overflow: auto;
+}
+.XQinfo table{
+  background-color: #fff;
+}
+
+.XQhead{
+	background: #fff;
+}
+
+.XQinfo table tr td{
+	padding-left:10px;
+}
+.XQinfo table thead {
+  font-weight: bold;
+}
+
 header span {
 	display: inline-block;
 	width: 41px;
@@ -125,16 +155,7 @@ header p b {
 	height: auto;
 	margin: 0 auto;
 }
-.XQbuilding{
-	width:90%;
-}
-.XQinfo{
-	width:251px;
-	height:auto;
-	background: #f2e7e5;
-	padding: 10px;
-	float: left;
-}
+
 .main>div {
 	margin-left: 4px;
 	float: left;
@@ -145,8 +166,6 @@ header p b {
 	margin: 40px auto;
 }
 
-.XQhead{
-}
 .main div table {
 	float: left;
 }
@@ -174,22 +193,33 @@ header p b {
 	margin: 30px 0 10px 0;
 }
 .XQedit{
-	width:500px;
+	width:440px;
 	height:auto;
 	background: #f2e7e5;
 	float: left;
-	margin-left: 10px;
+	margin-left: 5px;
 	padding: 10px;
 
 }
 .XQlist{
-	width:400px; 
-	height:auto;
+	width:246px; 
+	height:125px;
 	float: left;
 	margin-left: 5px;
 	background: #f2e7e5;
 	padding: 10px;
 }
+.XQlist table tbody {
+  background-color: #fff;
+}
+.XQlist table thead {
+  font-weight: bold;
+}
+
+.XQlist table tr td{
+	padding-left: 10px;
+}
+
 .main>div:nth-child(2) {
 	width: 188px;
 	height: 122px;
@@ -253,16 +283,17 @@ header p b {
 	width:231px;
 	height:34px;
 	outline:none;
-	/*margin-top:-10px;*/
 }
 .btn-default{
 	width:60px;
 	height:36px;
 	outline:none;
 	/*margin:0 auto;*/
-	/*margin-left:120px;*/
-	color:#787677;
-	font-weight:bold;
+	margin-left:120px;
+	width: auto;
+}
+.qq{
+	margin-left: 0;
 }
 .user{
 	width: 8rem;
@@ -297,6 +328,7 @@ header p b {
 	height: auto;
 	margin: 2% auto;
 }
+
 /*.menu a{
 	display: inline-block;
 	height: 3rem;
@@ -317,8 +349,10 @@ header p b {
 }
 .menu a:hover{
 	background: #fff;
-	color: #333;*/
+	color: #333;
 }
 .menu>div{
 	clear: both;
 	/*padding-top: 2rem;*/
+	width: 100%
+}

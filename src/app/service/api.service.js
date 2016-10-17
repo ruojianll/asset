@@ -1,3 +1,4 @@
+
 angular.module('asset').service('apiServ',function($http,environment,$q){
     var handle = function(url,data,type){
         url = environment.host + url;

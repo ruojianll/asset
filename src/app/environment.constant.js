@@ -4,3 +4,4 @@ angular.module('asset').constant('environment',{
 	'username':'lilei',
 	'password':'123456'
 });
+
