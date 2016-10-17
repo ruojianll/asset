@@ -1,4 +1,4 @@
-<div class="m_big">
+<div class="m_big" ng-controller='Equipments'>
   <div class="fx">
       <table class="table">
         <tr style="background: #fff;color: #552e03;">
@@ -9,13 +9,13 @@
         <th>phone</th>
         <th>price</th>
       </tr>
-      <tr style="background: #f5f5f5;color: #303c56;">
-        <td>1</td>
-        <td>table</td>
-        <td>T01</td>
-        <td>不知道</td>
-        <td>666</td>
-        <td>666</td>
+      <tr style="background: #f5f5f5;color: #303c56;" ng-repeat="x in f" ng-click="show($index)">
+        <td>{{x.id}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.type}}</td>
+        <td>{{x.factory}}</td>
+        <td>{{x.phone}}</td>
+        <td>{{x.price}}</td>
       </tr>
       </table>
       <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm"></ul>
@@ -23,27 +23,27 @@
   <div class="m_box">
       <div class="form-group">
         <label>name</label>
-        <input type="text" ng-model="dynamicPopover.content" class="form-control">
+        <input type="text" class="form-control" ng-model="equipments.name" value="{{equipments.name}}">
       </div>
       <div class="form-group">
         <label>type</label>
-        <input type="text" ng-model="dynamicPopover.title" class="form-control">
+        <input type="text"  class="form-control" ng-model="equipments.type" value="{{equipments.type}}">
       </div>
       <div class="form-group">
         <label>factory</label>
-        <input type="text" ng-model="dynamicPopover.templateUrl" class="form-control">
+        <input type="text"  class="form-control" ng-model="equipments.factory" value="{{equipments.factory}}">
       </div>
       <div class="form-group">
         <label>phone</label>
-        <input type="text" ng-model="dynamicPopover.templateUrl" class="form-control">
+        <input type="text"  class="form-control" ng-model="equipments.phone" value="{{equipments.phone}}">
       </div>
       <div class="form-group">
         <label>price</label>
-        <input type="text" ng-model="dynamicPopover.templateUrl" class="form-control">
+        <input type="text"  class="form-control" ng-model="equipments.price" value="{{equipments.price}}">
       </div>
-      <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Edit</button>
+      <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click="edit()">Edit</button>
 
-      <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Delete</button>
-      <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Create</button>
+      <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click="delete()">Delete</button>
+      <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click="create()">Create</button>
   </div>
 </div>

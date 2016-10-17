@@ -5,4 +5,3 @@ angular.module("asset").constant("environment",
 	username:'lizexin',
 	password:'123456'
 })
-

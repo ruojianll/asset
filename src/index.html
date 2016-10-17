@@ -23,9 +23,22 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="">
+        <div class="head"></div>
+        <div class="login">
+            <a><img src="assets/images/logo.jpg"></a>
+            <div class="user">
+                未登录<b class="glyphicon glyphicon-triangle-bottom"></b>
+            </div>
+        </div> 
+    </div>
+    <div ui-view='' class="ng-scope" class="view">
+        <div class="tmp">
+            您还未登录，请<span class="blueColor" ui-sref='login'>登录</span>
+        </div>
+    </div>
 
-    <div ui-view></div>
-
+    <!-- <div ui-view='content'></div> -->
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
