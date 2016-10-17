@@ -6,36 +6,27 @@
     .config(routerConfig);
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
-/*<<<<<<< HEAD
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/template/assets.template.html',
-        controller: 'assetsController'
-      });
-=======*/
+
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'app/template/login2.template.html',
       }).state("signIn",{
+        url:"/signIn",
+        templateUrl:'app/template/config.template.html'
+      }).state("signIn.assets",{
         url:"/assets",
         templateUrl:'app/template/assets.template.html'
-      }).state("assets",{
-        url:"/assets",
-        templateUrl:'app/template/assets.template.html'
-      }).state("buildings",{
+      }).state("signIn.buildings",{
         url:"/buildings",
         templateUrl:'app/template/buildings.template.html'
-      }).state("equipments",{
+      }).state("signIn.equipments",{
         url:"/equipments",
         templateUrl:'app/template/equipments.template.html'
-      }).state("rooms",{
+      }).state("signIn.rooms",{
         url:"/rooms",
         templateUrl:'app/template/rooms.template.html'
       })
->>>>>>> 688d26924539ed37ff3074f47dd6ddacd18b6b4d
-
-    // $urlRouterProvider.otherwise('/h/login');
+    // $urlRouterProvider.otherwise('signIn.assets');
   }
   
 })();

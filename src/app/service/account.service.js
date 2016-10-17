@@ -1,5 +1,6 @@
 
-angular.module('asset').service('accountServ',function($http,apiServ){
+
+/*angular.module('asset').service('accountServ',function($http,apiServ){
 	var login=function(user_name,password){
 		apiServ.post('/api/account/login',{'user_name':user_name,'password':password}).then(
 			function(data){
@@ -23,13 +24,11 @@ angular.module('asset').service('accountServ',function($http,apiServ){
 	}
 
 
-})
+})*/
 
 
 
-
-
-/*angular.module('asset').service('accountServ',function(environment,$http,apiServ,$state){
+angular.module('asset').service('accountServ',function(environment,$http,apiServ,$state){
     var login = function(){
     	// alert(1)
 	    apiServ.post('/api/account/login',{user_name:environment.username,password:environment.password}).then(
@@ -56,4 +55,4 @@ angular.module('asset').service('accountServ',function($http,apiServ){
         'login':login,
         'logout':logout
     }
-});*/
+});

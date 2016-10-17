@@ -1,6 +1,6 @@
 body{
-	/*background:red;*/
 	width:100%;
+	height: 100vh;
 	background:url(../assets/images/bg.png) no-repeat;
 	background-size:cover;
 	position: relative;
@@ -78,63 +78,8 @@ body{
 	font-weight:bold;
 	color:#4477ac;
 }
-<<<<<<< HEAD
-.thumbnail img.pull-right {
-  width: 50px;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-body{
-	width: 100%;
-	height: 100vh;
-	background: url(img/bg.png) no-repeat;
-	background-size: cover;
-}
-header {
-	width:100%;
-	height: 49px;
-	background: #efdcd8;
-}
-header div {
-	width: 77.4%;
-	margin: 0 auto;
-	height: 100%
-}
-header span {
-	display: inline-block;
-	width: 41px;
-	height: 33px;
-}
-header span img {
-	width: 100%;
-	height: 100%;
-	margin-top: 5px;
-}
-header p {
-	height: 100%;
-	float: right;
-	display: flex;
-	align-items: center;
-	color:  #317ab1;
-	font-family: '微软雅黑';
-}
-header p b {
-	display: inline-block;
-	border: 4px solid #317ab1;
-	border-bottom: 0;
-	border-color: #317ab1 transparent;
-	margin-left: 3px;
-}
-.Tab {
-	width: 1254px;
-	height: auto;
-	margin: 31px auto 0;
-}
 .main {
 	display: flex;
-	width: 1254px;
 	height: auto;
 	margin: 0 auto;
 }
@@ -178,8 +123,11 @@ header p b {
 	width: 803px;
 	height: 207px;
 }
+.main>div:nth-child(3) table {
+	width: 58%;
+}
 .main>div div {
-	width: 304px;
+	width: 39.86%;
 	float: right;
 	padding: 0;
 	position: relative; 
@@ -189,7 +137,26 @@ header p b {
 }
 .main>div div button {
 	margin-top: 6px;
+	color: #808080;
+    font-weight: bold;
+    height: 36px;
+    background-color: #f7f7f7;
+    border-color: #ccc;
+    padding: 6px 12px;
+    border: 1px solid rgba(0,0,0,0.16);
+    border-radius: 4px;
+
 }
+.main>div div .hover {
+	color: #444;
+    background-color: #fff;
+
+}
+.main>div div .hover:hover {
+	background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
 .main>div div .dropdown-menu {
 	display: block;
 	padding: 0 14px;
@@ -197,7 +164,7 @@ header p b {
 }
 .main>div div ul li {
 	line-height: 27px;
-=======
+}
 .box p{
 	font-size:24px;
 	color:#333;
@@ -270,5 +237,33 @@ header p b {
 }
 .tmp span{
 	cursor: pointer;
->>>>>>> 688d26924539ed37ff3074f47dd6ddacd18b6b4d
 }
+.menu{
+	width: 70%;
+	height: auto;
+	margin: 2% auto;
+}
+/*.menu a{
+	display: inline-block;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	padding: 0 1rem;
+	color: blue;
+	background: transparent;
+	text-decoration: none;
+	border-radius: 10% 10% 0 0;
+	float: left;
+	margin: 0 0.5rem;
+}
+.menu a.active{
+	background: #fff;
+	color: #333;
+}
+.menu a:hover{
+	background: #fff;
+	color: #333;*/
+}
+.menu>div{
+	clear: both;
+	padding-top: 2rem;
