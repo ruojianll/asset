@@ -1,5 +1,6 @@
 
 angular.module('asset').service('accountServ',function(environment,$http,apiServ,$state){
+
     var login = function(){
     	// alert(1)
 	    apiServ.post('/api/account/login',{user_name:environment.username,password:environment.password}).then(
