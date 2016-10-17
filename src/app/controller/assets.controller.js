@@ -10,7 +10,6 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		$scope.states=data;
 		console.log(data);
 	})
-	
 	$scope.show1=function($index){
 		var building_id=$('.main div:eq(0) tr').eq($index+1).attr('id');
 		console.log(building_id);
