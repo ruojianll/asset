@@ -1,6 +1,4 @@
 angular.module('asset').controller('assetsController',function($scope,environment,$http,accountServ,apiServ){
-	accountServ.login('luchenqian','123456');
-	// accountServ.logout();
 	apiServ.post('/eqp/api/building/all',{}).then(function(data){
 		console.log(data);
 		$scope.buildings=data;
@@ -12,11 +10,12 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		$scope.states=data;
 		console.log(data);
 	})
+	
 	$scope.show1=function($index){
 		var building_id=$('.main div:eq(0) tr').eq($index+1).attr('id');
 		console.log(building_id);
 		$scope.flag1=true;
-		apiServ.post('/eqp/api/room/all',{ building_id:building_id}).then(function(data){
+		apiServ.post('/eqp/api/building/room/all',{ building_id:building_id}).then(function(data){
 			console.log(data);
 			$scope.rooms=data;
 		})

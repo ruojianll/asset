@@ -56,6 +56,11 @@ body{
 	top:0;
 	left:0;
 }
+.XQbuilding{
+	width:100%;
+	height: auto;
+	overflow: hidden;
+}
 .tit{
 	width:1200px;
 	height:52px;
@@ -78,8 +83,30 @@ body{
 	font-weight:bold;
 	color:#4477ac;
 }
+
+.XQinfo{
+	width:251px;
+	max-height:300px;
+	background: #f2e7e5;
+	padding: 10px;
+	float: left;
+	overflow: auto;
+}
+.XQinfo table{
+  background-color: #fff;
+}
+.XQhead{
+	background: #fff;
+}
+.XQinfo table tr td{
+	padding-left:10px;
+}
+.XQinfo table thead {
+  font-weight: bold;
+}
+
 .main {
-	display: flex;
+	-display: flex;
 	height: auto;
 	margin: 0 auto;
 }
@@ -88,6 +115,9 @@ body{
 	float: left;
 	background: #f1e6e2;
 	padding: 11px;
+}
+.XQinfo ul{
+	margin: 40px auto;
 }
 .main div table {
 	float: left;
@@ -108,19 +138,44 @@ body{
 }
 .main>div:nth-child(1) {
 	margin: 0;
-	width: 251px;
+	width: 218px;
 	min-height: 207px;
 
 }
 .main>div:nth-child(1) ul {
 	margin: 30px 0 10px 0;
 }
+.XQedit{
+	width:440px;
+	height:auto;
+	background: #f2e7e5;
+	float: left;
+	margin-left: 5px;
+	padding: 10px;
+
+}
+.XQlist{
+	width:246px; 
+	height:125px;
+	float: left;
+	margin-left: 5px;
+	background: #f2e7e5;
+	padding: 10px;
+}
+.XQlist table tbody {
+  background-color: #fff;
+}
+.XQlist table thead {
+  font-weight: bold;
+}
+.XQlist table tr td{
+	padding-left: 10px;
+}
 .main>div:nth-child(2) {
-	width: 188px;
-	height: 122px;
+	width: 130px;
 }
 .main>div:nth-child(3) {
-	width: 803px;
+	width: 600px;
 	height: 207px;
 }
 .main>div:nth-child(3) table {
@@ -135,6 +190,7 @@ body{
 .main>div div h5 {
 	font-weight: bold;
 }
+
 .main>div div button {
 	margin-top: 6px;
 	color: #808080;
@@ -199,7 +255,6 @@ body{
 	width:231px;
 	height:34px;
 	outline:none;
-	/*margin-top:-10px;*/
 }
 .btn-default{
 	width:60px;
@@ -207,8 +262,10 @@ body{
 	outline:none;
 	/*margin:0 auto;*/
 	margin-left:120px;
-	color:#787677;
-	font-weight:bold;
+	width: auto;
+}
+.qq{
+	margin-left: 0;
 }
 .user{
 	width: 8rem;
@@ -255,15 +312,17 @@ body{
 	border-radius: 10% 10% 0 0;
 	float: left;
 	margin: 0 0.5rem;
-}
+}*/
 .menu a.active{
 	background: #fff;
 	color: #333;
 }
 .menu a:hover{
 	background: #fff;
-	color: #333;*/
+	color: #333;
 }
 .menu>div{
 	clear: both;
-	padding-top: 2rem;
+	/*padding-top: 2rem;*/
+	width: 100%
+}
