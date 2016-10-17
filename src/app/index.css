@@ -195,7 +195,7 @@ header p b {
 }
 .XQlist{
 	width:246px; 
-	height:125px;
+	height:auto;
 	float: left;
 	margin-left: 5px;
 	background: #f2e7e5;
