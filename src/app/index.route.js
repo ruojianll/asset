@@ -1,9 +1,11 @@
+
 (function() {
   'use strict';
 
   angular
     .module('asset')
     .config(routerConfig);
+
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider.state('login', {
