@@ -56,8 +56,6 @@ body{
 	top:0;
 	left:0;
 }
-
-
 .XQbuilding{
 	width:100%;
 	height: auto;
@@ -95,7 +93,6 @@ header div {
 	margin: 0 auto;
 	height: 100%
 }
-
 .XQinfo{
 	width:251px;
 	max-height:300px;
@@ -107,18 +104,15 @@ header div {
 .XQinfo table{
   background-color: #fff;
 }
-
 .XQhead{
 	background: #fff;
 }
-
 .XQinfo table tr td{
 	padding-left:10px;
 }
 .XQinfo table thead {
   font-weight: bold;
 }
-
 header span {
 	display: inline-block;
 	width: 41px;
@@ -155,7 +149,6 @@ header p b {
 	height: auto;
 	margin: 0 auto;
 }
-
 .main>div {
 	margin-left: 4px;
 	float: left;
@@ -165,7 +158,6 @@ header p b {
 .XQinfo ul{
 	margin: 40px auto;
 }
-
 .main div table {
 	float: left;
 }
@@ -215,11 +207,9 @@ header p b {
 .XQlist table thead {
   font-weight: bold;
 }
-
 .XQlist table tr td{
 	padding-left: 10px;
 }
-
 .main>div:nth-child(2) {
 	width: 188px;
 	height: 122px;
@@ -328,7 +318,6 @@ header p b {
 	height: auto;
 	margin: 2% auto;
 }
-
 /*.menu a{
 	display: inline-block;
 	height: 3rem;
@@ -342,7 +331,6 @@ header p b {
 	float: left;
 	margin: 0 0.5rem;
 }*/
-
 .menu a.active{
 	background: #fff;
 	color: #333;
