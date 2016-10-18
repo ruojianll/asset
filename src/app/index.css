@@ -1,16 +1,157 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+body{
+	width:100%;
+	height: 100vh;
+	background:url(../assets/images/bg.png) no-repeat;
+	background-size:cover;
+	position: relative;
+	overflow:hidden;
+}
+.head{
+	width: 100%;
+	height: 5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	opacity: 0.3;
+	z-index: 1
+}
+.login{
+	width: 80%;
+	height: 5rem;
+	margin: 0 auto;
+	position: relative;
+	z-index: 666;
+}
+.login a{
+	display: block;
+	width: 4rem;
+	position: relative;
+	height: 100%;
+	float: left;
+}
+.login a img{
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto; 
+}
+.box{
+	width:100%;
+	position:relative;
 }
 
-.thumbnail {
-  height: 200px;
+.box:after{
+	content:'';
+	opacity:.3;
+	background:#FFFFFF;
+	display:block;
+	width:100%;
+	height:52px;
+	position:absolute;
+	top:0;
+	left:0;
 }
+.tit{
+	width:1200px;
+	height:52px;
+	margin:0 auto;
+}
+.tit span{
+	display:block;
+	width:41px;
+	height:33px;
+	background:url(../assets/images/logo.jpg);
+	background-size:cover;
+	float:left;
+	margin-top:10px;
+}
+.tit a{
+	display:block;
+	float:right;
+	line-height:52px;
+	font-size:12px;
+	font-weight:bold;
+	color:#4477ac;
+}
+header {
+	width:100%;
+	height: 49px;
+	background: #efdcd8;
+}
+header div {
+	width: 77.4%;
+	margin: 0 auto;
+	height: 100%
+}
+header span {
+	display: inline-block;
+	width: 41px;
+	height: 33px;
+}
+header span img {
+	width: 100%;
+	height: 100%;
+	margin-top: 5px;
+}
+header p {
+	height: 100%;
+	float: right;
+	display: flex;
+	align-items: center;
+	color:  #317ab1;
+	font-family: '微软雅黑';
+}
+header p b {
+	display: inline-block;
+	border: 4px solid #317ab1;
+	border-bottom: 0;
+	border-color: #317ab1 transparent;
+	margin-left: 3px;
+}
+.Tab {
+	width: 1254px;
+	height: auto;
+	margin: 31px auto 0;
+}
+.main {
+	display: flex;
+	width: 1254px;
+	height: auto;
+	margin: 0 auto;
+}
+.main>div {
+	margin-left: 4px;
+	float: left;
+	background: #f1e6e2;
+	padding: 11px;
+}
+.main div table {
+	float: left;
+}
+.main div table tr{
+	height: 37px;
+	background: #f9f9f9;
+}
+.main div table tr:nth-child(1){
+	background: #fff;
+}
+.main div table tr:first-child {
+	font-weight: bold;
+}
+.main div table td{
+	border: 1px solid #ddd;
+	padding-left: 9px;
+}
+.main>div:nth-child(1) {
+	margin: 0;
+	width: 251px;
+	min-height: 207px;
 
-.thumbnail img.pull-right {
-  width: 50px;
 }
 
 /*页面样式*/
@@ -55,4 +196,139 @@ button{
   width: auto;
   height: 34px;
   padding: 10px 15px;
+}
+.main>div:nth-child(1) ul {
+	margin: 30px 0 10px 0;
+}
+.main>div:nth-child(2) {
+	width: 188px;
+	height: 122px;
+}
+.main>div:nth-child(3) {
+	width: 803px;
+	height: 207px;
+}
+.main>div div {
+	width: 304px;
+	float: right;
+	padding: 0;
+	position: relative; 
+}
+.main>div div h5 {
+	font-weight: bold;
+}
+.main>div div button {
+	margin-top: 6px;
+}
+.main>div div .dropdown-menu {
+	display: block;
+	padding: 0 14px;
+	top: 69px;
+}
+.main>div div ul li {
+	line-height: 27px;
+}
+.box p{
+	font-size:24px;
+	color:#333;
+	font-weight:bold;
+	margin-top:200px;
+	text-align:center;
+}
+.txt{
+	width:300px;
+	height:150px;
+	margin:150px auto;
+
+}
+.txt span{
+	display:block;
+	margin-bottom:12px;
+	background:#787677;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding:2px 5px;
+	height:42px;
+	line-height:42px;
+	box-shadow:0px 0px 2px 3px #e0d2d1;
+	border-radius:5px;
+}
+.txt .pass{
+	text-indent:1em;
+}
+.txt input{
+	color:#787677;
+	width:231px;
+	height:34px;
+	outline:none;
+	/*margin-top:-10px;*/
+}
+.btn-default{
+	/*width:60px;*/
+	width:auto;
+	height:36px;
+	outline:none;
+	/*margin:0 auto;*/
+	/*margin-left:120px;*/
+	color:#787677;
+	font-weight:bold;
+}
+.user{
+	width: 8rem;
+	height: 100%;
+	float: right;
+	padding-right: 2rem;
+	text-align: right;
+	line-height: 5rem;
+	font-weight: bold;
+	color: blue;
+}
+.blueColor{
+	color: blue;
+}
+.tmp{
+	width: 20rem;
+	height: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	position: absolute;
+	top: 20rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-weight: bold;
+}
+.tmp span{
+	cursor: pointer;
+}
+.menu{
+	width: 70%;
+	height: auto;
+	margin: 2% auto;
+}
+/*.menu a{
+	display: inline-block;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	padding: 0 1rem;
+	color: blue;
+	background: transparent;
+	text-decoration: none;
+	border-radius: 10% 10% 0 0;
+	float: left;
+	margin: 0 0.5rem;
+}
+.menu a.active{
+	background: #fff;
+	color: #333;
+}
+.menu a:hover{
+	background: #fff;
+	color: #333;*/
+}
+.menu>div{
+	clear: both;
+	padding-top: 2rem;
 }
