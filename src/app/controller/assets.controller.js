@@ -1,4 +1,5 @@
 angular.module('asset').controller('assetsController',function($scope,environment,$http,accountServ,apiServ){
+	$scope.$parent.$parent.currentPage = 0;
 	apiServ.post('/eqp/api/building/all',{}).then(function(data){
 		console.log(data);
 		$scope.buildings=data;

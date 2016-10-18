@@ -360,3 +360,22 @@ body{
 	padding-top: 2rem;
 	width: 100%
 }
+.Prompt{
+    display: block;
+    position:  fixed;
+    opacity: 0;
+    width: 8rem;
+    height: auto;
+    padding: 0.4rem 0.5rem;
+    z-index: -1;
+    background: #f90;
+    top: 50%;
+    left: 50%;
+    margin-left: -4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.7rem;
+    border-radius:5px ;
+    transition: all .3s;
+    overflow: auto;
+}

@@ -2,7 +2,7 @@ angular.module("asset").controller("Equipments",function($scope,$http,environmen
 	$scope.maxSize = 1;
 	$scope.bigTotalItems = 175;
 	$scope.bigCurrentPage = 1;
-
+  $scope.$parent.$parent.currentPage = 3;
 
 //获取所有设备
 $scope.dian=false;
