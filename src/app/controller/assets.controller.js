@@ -1,5 +1,4 @@
 angular.module('asset').controller('assetsController',function($scope,environment,$http,accountServ,apiServ){
-
 	//分页
 	$scope.pageData=[];
   	function slice(arr, page,number){
