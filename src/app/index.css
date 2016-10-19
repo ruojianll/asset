@@ -119,12 +119,11 @@ body{
 }
 
 .XQinfo{
-	width:251px;
-	max-height:300px;
+	width:28%;
+	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
 	float: left;
-	overflow: auto;
 }
 .XQinfo table{
   background-color: #fff;
@@ -151,7 +150,7 @@ body{
 	padding: 11px;
 }
 .XQinfo ul{
-	margin: 40px auto;
+	margin: 0 auto;
 }
 .main div table {
 	float: left;
@@ -181,7 +180,7 @@ body{
 	margin: 30px 0 10px 0;
 }
 .XQedit{
-	width:440px;
+	width:44%;
 	height:auto;
 	background: #f2e7e5;
 	float: left;
@@ -190,8 +189,8 @@ body{
 
 }
 .XQlist{
-	width:246px; 
-	height:125px;
+	width:25%; 
+	height:auto;
 	float: left;
 	margin-left: 5px;
 	background: #f2e7e5;
@@ -366,7 +365,7 @@ body{
 }
 .menu>div{
 	clear: both;
-	padding-top: 2rem;
+	/*padding-top: 2rem;*/
 	width: 100%
 }
 .Prompt{
