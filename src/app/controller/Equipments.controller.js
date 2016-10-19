@@ -1,8 +1,13 @@
-angular.module("asset").controller("Equipments",function($scope,$http,environment,apiServ,accountServ){
-	$scope.maxSize = 1;
-	$scope.bigTotalItems = 175;
-	$scope.bigCurrentPage = 1;
+angular.module("asset").controller("Equipments",function($scope,$http,environment,apiServ,accountServ,$log){
 
+ //翻页 
+  $scope.pageData = [];
+  function _slice(arr, page, number){
+    return arr.slice((page-1)*number, page*number);
+  }
+  $scope.pageChange = function(){
+    $scope.pageData = _slice($scope.f, $scope.currentPage, 5); 
+  }  
 
 //获取所有设备
 $scope.dian=false;
@@ -12,15 +17,12 @@ $scope.dian=false;
     ).then(
         function (data){
         	//alert(1)
-        	console.log(data)
+        	//console.log(data)
             $scope.f=data
-             $scope.show=function(i){
-                // $scope.dian=!$scope.dian;
-                //     // console.log($index)
-                //     console.log($scope.a[$index])
-                //     $scope.b = $scope.a[$index]
+            $scope.pageData = _slice($scope.f,1,5)
+            $scope.show=function(i){
                 $scope.equipments = $scope.f[i]
-             }
+            }
         },
         function (err){
         	alert(2)
@@ -28,6 +30,7 @@ $scope.dian=false;
         }
     )
 
+  
 //新建设备
    $scope.create = function(){
         setBud()
@@ -73,6 +76,7 @@ $scope.dian=false;
       ).then(
         function(){
           alert("修改成功！")
+          $scope.equipments = ''
         },
         function(err){
           console.log(err);
@@ -93,12 +97,12 @@ $scope.dian=false;
         }
       ).then(
         function(){
-          location.reload()
           alert("删除成功！")
+          location.reload()
         },
         function(err){
             alert('失败')
-          console.log(err);
+            console.log(err);
         }
       )
     }
