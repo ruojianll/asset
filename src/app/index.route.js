@@ -1,11 +1,14 @@
+
 (function() {
   'use strict';
 
   angular
     .module('asset')
     .config(routerConfig);
+
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
+
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'app/template/login2.template.html',
@@ -27,5 +30,4 @@
       })
     // $urlRouterProvider.otherwise('signIn.assets');
   }
-  
 })();

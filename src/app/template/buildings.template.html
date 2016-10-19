@@ -1,0 +1,53 @@
+
+<div class="XQbuilding" ng-controller = "budCtrl">
+	<div class="XQinfo">
+		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb" id="example" class='table table-hover'>
+			<thead height="37" class="XQhead">
+			  <tr>
+			    <td width="40">id</td>
+  				<td width="80">name</td>
+  				<td width="105">location</td>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr height="37" ng-repeat = 'i in data1' ng-click = '_show($index)'>
+  				<td width="40">{{i.id}}</td>
+  				<td width="80">{{i.name}}</td>
+  				<td width="105">{{i.location}}</td>
+  			</tr>
+			</tbody>
+		</table>
+		<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
+	</div>
+	<div class="XQedit">
+		<div class="form-group">
+	      <label>Name</label>
+	      <input type="text" class="form-control" ng-model = 'custom.name' value = '{{custom.name}}'>
+	    </div>
+	    <div class="form-group">
+	      <label>Location</label>
+	      <input type="text" class="form-control" ng-model = 'custom.location' value = '{{custom.location}}'>
+	    </div>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_edit()'>Edit({{custom.id+':'+custom.name}})</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_delete()'>Delete({{custom.id+':'+custom.name}})</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_create()'>Create</button>
+	</div>
+	<div class="XQlist" ng-show = 'qq'>
+		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb" class="table table-bordered">
+		  <thead height="37" class="XQhead">
+		    <tr>
+  				<td width="185">id</td>
+  				<td width="275">Code</td>
+  			</tr>
+		  </thead>
+			<tbody>
+			  <tr height="37" ng-repeat = 'i in data2'>
+  				<td width="185">{{i.id}}</td>
+  				<td width="275">{{i.code}}</td>
+  			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+
