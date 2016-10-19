@@ -88,7 +88,7 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 
 		$scope.delete=function(){
 			apiServ.post('/eqp/api/asset/delete',{asset_id:$scope.asset_id}).then(function(data){
-    			// Prompt('已删除')
+    			Prompt('已删除');
     			$scope.show2(0);
     			$('#name').val('');
 				$('#num').val('');
