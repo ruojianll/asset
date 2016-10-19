@@ -38,7 +38,7 @@ body{
 	background:url(../assets/images/bg.png) no-repeat;
 	background-size:cover;
 	position: relative;
-	overflow:hidden;
+	-overflow:hidden;
 }
 .head{
 	width: 100%;
@@ -157,6 +157,7 @@ body{
 	float: left;
 }
 .main div table tr{
+	cursor: pointer;
 	height: 37px;
 	background: #f9f9f9;
 }
@@ -172,7 +173,7 @@ body{
 }
 .main>div:nth-child(1) {
 	margin: 0;
-	width: 218px;
+	width:21%;
 	min-height: 207px;
 
 }
@@ -206,11 +207,12 @@ body{
 	padding-left: 10px;
 }
 .main>div:nth-child(2) {
-	width: 130px;
+	width: 14%;
+	min-height: 100px;
 }
 .main>div:nth-child(3) {
-	width: 600px;
-	height: 207px;
+	width: 64%;
+	min-height: 207px;
 }
 .main>div:nth-child(3) table {
 	width: 58%;
@@ -248,12 +250,20 @@ body{
 }
 
 .main>div div .dropdown-menu {
-	display: block;
-	padding: 0 14px;
+	display: none;
 	top: 69px;
 }
 .main>div div ul li {
+	cursor: pointer;
+	padding: 0 14px;
 	line-height: 27px;
+}
+/* .main div div .list {
+	display: none !importment;
+} */
+.main div div .list li:hover {
+	color: #fff;
+	background: #347AB6;
 }
 .box p{
 	font-size:24px;

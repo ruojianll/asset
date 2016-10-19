@@ -5,19 +5,19 @@
 				<td width="85px">name</td>
 				<td width="110px">location</td>   
 			</tr>
-			<tr id={{i.id}} ng-click="show1($index)" ng-repeat="i in buildings">
+			<tr ng-click="show1($index)" ng-repeat="i in pageData">
 				<td>{{i.name}}</td>
 				<td>{{i.location}}</td>   
 			</tr>
 		</table>
-    	<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></ul>
+    	<ul uib-pagination total-items="buildings.length" ng-model="currentPage" ng-change="pagechange()" items-per-page="6" ></ul>
 	</div>
 	<div ng-show="flag1">
 		<table>
 			<tr>
 				<td width="130px">code</td>  
 			</tr>
-			<tr id={{i.id}} ng-click="show2($index)" ng-repeat="i in rooms">
+			<tr ng-click="show2($index)" ng-repeat="i in rooms">
 				<td>{{i.code}}</td>  
 			</tr>
 		</table>
@@ -31,7 +31,7 @@
 				<td width="105px">factory</td>  
 				<td width="115px">number</td>
 			</tr>
-			<tr ng-repeat="i in equipments" ng-click="show3($index)" id={{i.id}}>
+			<tr ng-repeat="i in equipments" ng-click="show3($index)">
 				<td>{{i.equipment_id}}</td>
 				<td>{{i.equipment_name}}</td>
 				<td>{{i.equipment_type}}</td>
@@ -41,9 +41,9 @@
 		</table>
 		<div>
 			<h5>Equipment</h5>
-		    <input type="text" class="form-control" ng-model="f" id="name">
-			<ul class="dropdown-menu" ng-show="flag3">
-				<li ng-repeat="i in states | filter:f">{{i.name+'('+i.type+')'}}</li>
+		    <input type="text" class="form-control" ng-model="f" id="name" autotemplate>
+			<ul class="dropdown-menu list">
+				<li ng-repeat="i in states | filter:f" ng-click="fn($index)" ng-mouseover="over()">{{i.name+'('+i.type+')'}}</li>
 			</ul>
 
 		    <h5>number</h5>
@@ -55,4 +55,5 @@
 		</div>
 	</div>
 </section>
+
 

@@ -9,7 +9,7 @@ angular.module('asset').service('accountServ',function(environment,$http,apiServ
 	            localStorage['user_id'] = user_id;
 	            localStorage['web_token'] = token;
 	            
-				alert('登录成功');
+				// alert('登录成功');
 				$state.go("signIn");
 	            // window.location.href='app/template/assets.template.html'
 	        },
