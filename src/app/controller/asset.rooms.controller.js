@@ -1,4 +1,5 @@
 angular.module('asset').controller("assetRooms",function($scope,$http,environment,apiServ){
+  $scope.$parent.$parent.currentPage = 2;
 	apiServ.post(
 		'/eqp/api/room/all',
         {}
