@@ -1,10 +1,17 @@
 
 
 // 建筑 building;
-angular.module("asset").controller("budCtrl", function (accountServ, $scope, environment, apiServ) {
+angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope, environment, apiServ) {
 
   getBud()
-  
+    
+  $scope.pageData=[];
+  function slice(arr, page,number){
+    return arr.slice((page-1)*number,page*number);
+  }
+  $scope.pagechange=function(){
+    $scope.pageData=slice($scope.data1,$scope.currentPage,5)
+  }
   // 获取建筑；
     function getBud () {
       apiServ.post(
@@ -13,15 +20,12 @@ angular.module("asset").controller("budCtrl", function (accountServ, $scope, env
       ).then(
         function (data) {
           $scope.data1 = data;
-          
-          // 分页；
-//        $('#example').dataTable({
-//          "pagingType": "full_numbers"
-//        })
+          $scope.pageData=slice($scope.data1,1,5);
+        
           
           $scope._show = function (i) {
             $scope.qq = true
-            $scope.custom = $scope.data1[i]
+            $scope.custom = $scope.pageData[i]
 
             // 获取房间号；
             apiServ.post(

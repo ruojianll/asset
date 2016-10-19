@@ -128,12 +128,11 @@ header div {
 	height: 100%
 }
 .XQinfo{
-	width:251px;
-	max-height:300px;
+	width:28%;
+	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
 	float: left;
-	overflow: auto;
 }
 .XQinfo table{
   background-color: #fff;
@@ -190,7 +189,7 @@ header p b {
 	padding: 11px;
 }
 .XQinfo ul{
-	margin: 40px auto;
+	margin: 0 auto;
 }
 .main div table {
 	float: left;
@@ -219,7 +218,7 @@ header p b {
 	margin: 30px 0 10px 0;
 }
 .XQedit{
-	width:440px;
+	width:44%;
 	height:auto;
 	background: #f2e7e5;
 	float: left;
@@ -228,7 +227,7 @@ header p b {
 
 }
 .XQlist{
-	width:246px; 
+	width:25%; 
 	height:auto;
 	float: left;
 	margin-left: 5px;
@@ -375,6 +374,6 @@ header p b {
 }
 .menu>div{
 	clear: both;
-	padding-top: 2rem;
+	/*padding-top: 2rem;*/
 	width: 100%
 }
