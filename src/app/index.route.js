@@ -25,7 +25,7 @@
         url:"/-Equipments",
         templateUrl:'app/template/equipments.template.html'
       }).state("signIn.rooms",{
-        url:"/Rooms",
+        url:"/-Rooms",
         templateUrl:'app/template/asset.rooms.html'
       })
     // $urlRouterProvider.otherwise('signIn.assets');

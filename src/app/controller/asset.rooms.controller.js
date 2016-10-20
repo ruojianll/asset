@@ -9,6 +9,9 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
 
   apiServ.post(
    '/eqp/api/room/all',
+  $scope.$parent.$parent.currentPage = 2;
+	apiServ.post(
+		'/eqp/api/room/all',
         {}
   ).then(
    function (data){

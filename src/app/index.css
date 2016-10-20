@@ -4,7 +4,7 @@ body{
 	background:url(../assets/images/bg.png) no-repeat;
 	background-size:cover;
 	position: relative;
-	overflow:hidden;
+	-overflow:hidden;
 }
 .head{
 	width: 100%;
@@ -94,12 +94,11 @@ header div {
 }
 
 .XQinfo{
-	width:251px;
-	max-height:300px;
+	width:28%;
+	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
 	float: left;
-	overflow: auto;
 }
 .XQinfo table{
   background-color: #fff;
@@ -166,10 +165,14 @@ header p b {
 	background: #f1e6e2;
 	padding: 11px;
 }
+.XQinfo ul{
+	margin: 0 auto;
+}
 .main div table {
 	float: left;
 }
 .main div table tr{
+	cursor: pointer;
 	height: 37px;
 	background: #f9f9f9;
 }
@@ -186,16 +189,24 @@ header p b {
 .main>div:nth-child(1) {
 	margin: 0;
 	width: 251px;
+	width:21%;
 	min-height: 207px;
 
 }
 .main>div:nth-child(1) ul {
 	margin: 30px 0 10px 0;
 }
-
-.XQlist{
+.XQedit{
+	width:44%;
+	height:auto;
+	background: #f2e7e5;
+	float: left;
+	margin-left: 5px;
+	padding: 10px;
 	width:400px; 
 	height:125px;
+	width:25%; 
+	height:auto;
 	float: left;
 	margin-left: 5px;
 	background: #f2e7e5;
@@ -219,6 +230,12 @@ header p b {
 .main>div:nth-child(3) {
 	width: 803px;
 	height: 207px;
+	width: 14%;
+	min-height: 100px;
+}
+.main>div:nth-child(3) {
+	width: 64%;
+	min-height: 207px;
 }
 .main>div div {
 	width: 304px;
@@ -233,12 +250,20 @@ header p b {
 	margin-top: 6px;
 }
 .main>div div .dropdown-menu {
-	display: block;
-	padding: 0 14px;
+	display: none;
 	top: 69px;
 }
 .main>div div ul li {
+	cursor: pointer;
+	padding: 0 14px;
 	line-height: 27px;
+}
+/* .main div div .list {
+	display: none !importment;
+} */
+.main div div .list li:hover {
+	color: #fff;
+	background: #347AB6;
 }
 .box p{
 	font-size:24px;
@@ -319,6 +344,27 @@ header p b {
 .menu>div{
 	clear: both;
 	padding-top: 2rem;
+	/*padding-top: 2rem;*/
+	width: 100%
+}
+.Prompt{
+    display: block;
+    position:  fixed;
+    opacity: 0;
+    width: 8rem;
+    height: auto;
+    padding: 0.4rem 0.5rem;
+    z-index: -1;
+    background: #f90;
+    top: 50%;
+    left: 50%;
+    margin-left: -4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.7rem;
+    border-radius:5px;
+    transition: all .3s;
+    overflow: auto;
 }
 
 ul,ol,li{

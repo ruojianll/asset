@@ -10,14 +10,14 @@
 			  </tr>
 			</thead>
 			<tbody>
-			  <tr height="37" ng-repeat = 'i in data1' ng-click = '_show($index)'>
+			  <tr height="37" ng-repeat = 'i in pageData' ng-click = '_show($index)'>
   				<td width="40">{{i.id}}</td>
   				<td width="80">{{i.name}}</td>
   				<td width="105">{{i.location}}</td>
   			</tr>
 			</tbody>
 		</table>
-		<ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
+		<ul uib-pagination boundary-links="true" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" total-items="data1.length" ng-model="currentPage" ng-change="pagechange()" items-per-page="5" ></ul>
 	</div>
 	<div class="XQedit">
 		<div class="form-group">
