@@ -1,4 +1,5 @@
 angular.module('asset').controller("assetRooms",function($scope,accountServ,$http,environment,apiServ){
+  getR();
   $scope.pageData = [];
   function _slice(arr, page, number){
     return arr.slice((page-1)*number, page*number);
@@ -7,34 +8,37 @@ angular.module('asset').controller("assetRooms",function($scope,accountServ,$htt
     $scope.pageData = _slice($scope.rooms, $scope.currPage, 5);
   }
   $scope.$parent.$parent.currentPage = 2;
-	apiServ.post(
-		'/eqp/api/room/all',
-        {}
-	).then(
-     function (data){
-        $scope.rooms = data;
-        $scope.pageData = _slice($scope.rooms, 1, 5);
-        apiServ.post(
-          '/eqp/api/building/all',
+  function getR(){
+    apiServ.post(
+      '/eqp/api/room/all',
           {}
-        ).then(
-           function (data){ 
-              $scope.buildings = data
-              $scope.pageData = _slice($scope.rooms,1,5)
-              _.each($scope.rooms,function(room){
-                var building = _.find($scope.buildings,function(building){
-                  return room.building_id === building.id;
+    ).then(
+       function (data){
+          $scope.rooms = data;
+          $scope.pageData = _slice($scope.rooms, 1, 5);
+          apiServ.post(
+            '/eqp/api/building/all',
+            {}
+          ).then(
+             function (data){ 
+                $scope.buildings = data
+                $scope.pageData = _slice($scope.rooms,1,5)
+                _.each($scope.rooms,function(room){
+                  var building = _.find($scope.buildings,function(building){
+                    return room.building_id === building.id;
+                  })
+                  building = building || {};
+                  room.building = building;
                 })
-                building = building || {};
-                room.building = building;
-              })
-           },
-           function (err){
-            console.log(err)
-          }
-        )
-     }
-  )
+             },
+             function (err){
+              console.log(err)
+            }
+          )
+       }
+    )
+  }
+  	
 
     $scope._active = function (x) {       
       $scope.custom = $scope.pageData[x]
@@ -53,8 +57,10 @@ angular.module('asset').controller("assetRooms",function($scope,accountServ,$htt
         }
       ).then(
         function(){
-          $scope.rooms.push($scope.custom);
-          location.reload()
+          document.getElementsByTagName('input')[0].value='';
+          document.getElementsByTagName('input')[1].value='';
+          // $scope.rooms.push($scope.custom);
+          getR()
         },
         function(err){
           console.log(err);
@@ -76,6 +82,8 @@ angular.module('asset').controller("assetRooms",function($scope,accountServ,$htt
         }
       ).then(
         function(){
+          document.getElementsByTagName('input')[0].value='';
+          document.getElementsByTagName('input')[1].value='';
           Prompt("修改成功！")
         },
         function(err){
@@ -96,7 +104,10 @@ angular.module('asset').controller("assetRooms",function($scope,accountServ,$htt
         }
       ).then(
         function(){
-          location.reload()
+          document.getElementsByTagName('input')[0].value='';
+          document.getElementsByTagName('input')[1].value='';
+          Prompt("已删除！")
+          getR()
         },
         function(err){
           console.log(err);

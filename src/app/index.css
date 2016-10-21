@@ -395,13 +395,16 @@ ul,ol,li{
 	height: auto;
 	background: #efe4e0;
 	float: left;
+	padding: 11px;
 }
 .jxabc_list{
+	cursor: pointer;
+	display: flex;
 	width: 226px;
 	height: 33px;
 	border: 1px solid #dcdcda;
 	padding: 0;
-	margin: 12px 0 0 11px;
+	margin: 0;
 }
 .jxabc_list>li{
 	float:left;
@@ -423,11 +426,13 @@ ul,ol,li{
 	border-right: none;
 }
 .jxabc_details{
+	cursor: pointer;
+	display: flex;
 	width: 226px;
 	height: 33px;
 	border: 1px solid #dcdcda;
 	padding: 0;
-	margin: 0 0 0 11px;
+	margin: 0;
 }
 .jxabc_details>li{
 	display: inline-block;
@@ -597,9 +602,6 @@ ul,ol,li{
 	padding: 0 14px;
 	line-height: 27px;
 }
-/* .main div div .list {
-	display: none !importment;
-} */
 .main div div .list li:hover {
 	color: #fff;
 	background: #347AB6;
