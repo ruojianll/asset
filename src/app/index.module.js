@@ -5,12 +5,11 @@
 
 })();
 var boolean = false;
-if(localStorage.username){
-		$('#loginin').html(localStorage.username)
+if(sessionStorage.username){
+		$('#loginin').html(sessionStorage.username)
 }else{
 		$('#loginin').html('未登录')
 }
-
 function Prompt(str){
 		$('.Prompt').html(str)
 		$('.Prompt').css({'opacity':'1','z-index':'999'})

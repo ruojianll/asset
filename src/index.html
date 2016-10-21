@@ -40,12 +40,8 @@
 				        <span class="caret"></span>
 				      </div>
 				      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
-				        <li role="menuitem" ng-click="Assets()"><a href="/#/signIn/-Assets">Assets</a></li>
-				        <li role="menuitem" ng-click="Buildings()"><a href="/#/signIn/-Buildings">Buildings</a></li>
-				        <li role="menuitem" ng-click="Rooms()"><a href="/#/signIn/-Rooms">Rooms</a></li>
-				        <li role="menuitem" ng-click="Equipements()"><a href="/#/signIn/-Equipments">Equipements</a></li>
-				        <li class="divider"></li>
-				        <li role="menuitem" ng-click='out()' ui-sref='out'><a >Login Out</a></li>
+				        <li role="menuitem" ng-click='log()' ui-sref='login' id="log"><a>Login</a></li>
+				        <li role="menuitem" ng-click='out()' ui-sref='out' id="out"><a>Login Out</a></li>
 				      </ul>
 				    </div>
 

@@ -299,21 +299,16 @@ button{
 	height:34px;
 	outline:none;
 }
-/*.btn-default{
-	width:auto;
+
+.ck{
+	width:67px;
 	height:36px;
 	outline:none;
 	color:#787677;
 	font-weight:bold;
-	margin-left:120px;
-	width: auto;
-	width:82px;
-	height:36px;
-	outline:none;
 	margin:0 auto;
 	display: block;
-<<<<<<< HEAD
-}*/
+}
 .user{
 	width: auto;
 	height: 100%;
