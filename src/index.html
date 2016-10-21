@@ -23,19 +23,29 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="">
+    <div class="" ng-controller="up">
         <div class="head"></div>
         <div class="login">
-            <a><img src="assets/images/logo.jpg"></a>
-            <div class="user">
-                未登录<b class="glyphicon glyphicon-triangle-bottom"></b>
-            </div>
+            <a class="pic"><img src="assets/images/logo.jpg"></a>
+            <div class="user" uib-dropdown dropdown-append-to-body>
+				      <div id="btn-append-to-body" uib-dropdown-toggle>
+				      	<span id="loginin">未登录</span>
+				        <span class="caret"></span>
+				      </div>
+				      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+				        <li role="menuitem" ng-click="Assets()"><a href="/#/signIn/-Assets">Assets</a></li>
+				        <li role="menuitem" ng-click="Buildings()"><a href="/#/signIn/-Buildings">Buildings</a></li>
+				        <li role="menuitem" ng-click="Rooms()"><a href="/#/signIn/-Rooms">Rooms</a></li>
+				        <li role="menuitem" ng-click="Equipements()"><a href="/#/signIn/-Equipments">Equipements</a></li>
+				        <li class="divider"></li>
+				        <li role="menuitem" ng-click='out()' ui-sref='out'><a >Login Out</a></li>
+				      </ul>
+				    </div>
+
         </div> 
     </div>
     <div ui-view='' class="ng-scope" class="view">
-        <div class="tmp">
-            您还未登录，请<span class="blueColor" ui-sref='login'>登录</span>
-        </div>
+
     </div>
 
     <!-- <div ui-view='content'></div> -->
