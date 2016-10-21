@@ -512,3 +512,23 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
+
+.fx{
+	display:inline-block;
+	width:376px;
+	min-height: 207px;
+	background:#f2ede7;
+	float:left;
+}
+.m_box{
+	display:inline-block;
+	margin-left:5px;
+	width:501px;
+	min-height: 378px;
+	background:#f2ede7;
+	padding:18px 11px;
+}
+.m_box button{
+	display:inline-block;
+	width:auto; 
+}
