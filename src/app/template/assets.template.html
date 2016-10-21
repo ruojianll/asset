@@ -11,7 +11,9 @@
 				<td>{{i.location}}</td>   
 			</tr>
 		</table>
-    	<ul uib-pagination total-items="buildings.length" ng-model="currentPage" ng-change="pagechange()" items-per-page="6" ></ul>
+    	<!-- <ul uib-pagination total-items="buildings.length" ng-model="currentPage" ng-change="pagechange()" items-per-page="6" ></ul> -->
+
+    	<ul uib-pagination boundary-links="true" max-size='3' total-items="buildings.length" ng-change="pageChange()" items-per-page="6" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
 	</div>
 	<div ng-show="flag1">
 		<table>

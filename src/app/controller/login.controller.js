@@ -3,8 +3,8 @@ angular.module('asset').controller("login",function(environment,accountServ,$sco
 		environment.username = $(".name").val();
 		environment.password = $(".password").val();
 		accountServ.login();
-//	  	$scope.ncc = localStorage.username;
-		
+		document.getElementById('log').style.display='none';
+		document.getElementById('out').style.display='block';
 		
 	})
 });

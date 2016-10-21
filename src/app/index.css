@@ -222,6 +222,7 @@ header p b {
 	height: auto;
 	margin: 31px auto 0;
 }
+
 .main {
 	display: flex;
 	width: 1254px;
@@ -258,7 +259,6 @@ header p b {
 	width: 251px;
 	width:21%;
 	min-height: 207px;
-
 }
 
 /*页面样式*/
@@ -299,56 +299,11 @@ input{
 }
 button{
   width: auto;
-  height: 34px;
+  height: 36px;
   padding: 10px 15px;
 
 }
-.main>div:nth-child(1) ul {
-	margin: 30px 0 10px 0;
-}
 
-.main>div:nth-child(2) {
-	width: 188px;
-	height: 122px;
-}
-.main>div:nth-child(3) {
-	width: 803px;
-	height: 207px;
-	width: 14%;
-	min-height: 100px;
-}
-.main>div:nth-child(3) {
-	width: 64%;
-	min-height: 207px;
-}
-.main>div div {
-	width: 304px;
-	float: right;
-	padding: 0;
-	position: relative; 
-}
-.main>div div h5 {
-	font-weight: bold;
-}
-.main>div div button {
-	margin-top: 6px;
-}
-.main>div div .dropdown-menu {
-	display: none;
-	top: 69px;
-}
-.main>div div ul li {
-	cursor: pointer;
-	padding: 0 14px;
-	line-height: 27px;
-}
-/* .main div div .list {
-	display: none !importment;
-} */
-.main div div .list li:hover {
-	color: #fff;
-	background: #347AB6;
-}
 .box p{
 	font-size:24px;
 	color:#333;
@@ -386,21 +341,13 @@ button{
 	height:34px;
 	outline:none;
 }
-.btn-default{
-	/*width:60px;*/
-	width:auto;
+.ck{
+	width:67px;
 	height:36px;
 	outline:none;
-	/*margin:0 auto;*/
 	color:#787677;
 	font-weight:bold;
-	/*margin-left:120px;*/
-	width: auto;
-	width:82px;
-	height:36px;
-	outline:none;
 	margin:0 auto;
-	/*width: auto;*/
 	display: block;
 }
 
@@ -586,3 +533,97 @@ ul,ol,li{
 	display:inline-block;
 	width:auto; 
 }
+/*assets.html样式 start*/
+.main {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.main>div {
+	margin-left: 4px;
+	float: left;
+	background: #f1e6e2;
+	padding: 11px;
+}
+.main div table {
+	float: left;
+}
+.main div table tr{
+	cursor: pointer;
+	height: 37px;
+	background: #f9f9f9;
+}
+.main div table tr:nth-child(1){
+	background: #fff;
+}
+.main div table tr:first-child {
+	font-weight: bold;
+}
+.main div table td{
+	border: 1px solid #ddd;
+	padding-left: 9px;
+}
+.main>div:nth-child(1) {
+	margin: 0;
+	width:21%;
+	min-height: 207px;
+
+}
+.main>div:nth-child(1) ul {
+	margin: 30px 0 10px 0;
+	width:100%;
+}
+.main>div:nth-child(2) {
+	width: 14%;
+	min-height: 122px;
+}
+.main>div:nth-child(3) {
+	width: 64%;
+	min-height: 207px;
+}
+.main>div:nth-child(3) table {
+	width: 58%;
+}
+.main>div div {
+	width: 40%;
+	float: right;
+	padding: 0;
+	position: relative; 
+}
+.main>div div h5 {
+	font-weight: bold;
+}
+.main>div div button {
+	color: #7B7979;
+	margin-top: 6px;
+	background: #F5F2F2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.main>div div .hover {
+	color: #333;
+	background: #fff;
+}
+.main>div div .hover:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.main>div div .dropdown-menu {
+	display: none;
+	top: 69px;
+}
+.main>div div ul li {
+	cursor: pointer;
+	padding: 0 14px;
+	line-height: 27px;
+}
+/* .main div div .list {
+	display: none !importment;
+} */
+.main div div .list li:hover {
+	color: #fff;
+	background: #347AB6;
+}
+
+/*assets.html样式 END*/
