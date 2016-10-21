@@ -10,6 +10,7 @@
 			<li>{{x.code}}</li>
 			<li>{{x.building.name}}({{x.building.location}})</li>
 		</ul>
+		<ul uib-pagination boundary-links="true"  total-items="rooms.length" ng-change="pageChange()" items-per-page="5" ng-model="currPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
 		<ul uib-pagination boundary-links="true"  total-items="rooms.length" ng-change="pageChange()" items-per-page="5" ng-model="curPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
 	</section>
 	<div class="jxbig">
@@ -26,7 +27,6 @@
 	    </div>
 	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_edit()'>Edit</button>
 	    <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_delete($index)'>Delete</button>
-	    <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_create()'>Create</button>	
-	    
+	    <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_create()'>Create</button>		    
 	</div>
 </div>
