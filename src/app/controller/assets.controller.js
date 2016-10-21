@@ -1,5 +1,6 @@
 angular.module('asset').controller('assetsController',function($scope,environment,$http,accountServ,apiServ){
 	//分页
+	$scope.$parent.$parent.currentPage = 0;
 	$scope.pageData=[];
   	function slice(arr, page,number){
     	return arr.slice((page-1)*number,page*number);
