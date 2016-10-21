@@ -1,0 +1,31 @@
+<div ng-controller="assetRooms">
+	<section class="jxabc_rooms_left" id="jx_page"> 
+		<ul class="jxabc_list">
+			<li>id</li>
+			<li>code</li>
+			<li>building</li>  
+		</ul>
+		<ul class="jxabc_details" ng-repeat= "x in pageData" ng-click = '_active($index)' >
+			<li>{{x.id}}</li>
+			<li>{{x.code}}</li>
+			<li>{{x.building.name}}({{x.building.location}})</li>
+		</ul>
+		<ul uib-pagination boundary-links="true"  total-items="rooms.length" ng-change="pageChange()" items-per-page="5" ng-model="currPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+	</section>
+	<div class="jxbig">
+		<div class="form-group">
+	      <label>Code</label>
+	      <input type="text" ng-model="custom.code" class="form-control" value = '{{custom.code}}'>
+	    </div>
+	    <div class="form-group" id="dropParent">
+	      <label>Building</label>
+	      <input type="text" value="{{custom.building.name+'('+custom.building.location+')'}}" class="form-control" ng-model="f" id="jxabc_building_details">
+	      <ul class="jxabc_Droplist">
+		     <li ng-repeat="j in buildings | filter:f" ng-click="fn($index)" ng-mouseover="over()">{{j.name}}({{j.location}})</li>
+		  </ul>
+	    </div>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_edit()'>Edit</button>
+	    <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_delete($index)'>Delete</button>
+	    <button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default" ng-click = '_create()'>Create</button>		    
+	</div>
+</div>
