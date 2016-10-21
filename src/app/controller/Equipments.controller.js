@@ -12,7 +12,7 @@ $scope.dian=false;
     ).then(
         function (data){
         	//alert(1)
-        	console.log(data)
+        	// console.log(data)
             $scope.f=data
              $scope.show=function(i){
                 // $scope.dian=!$scope.dian;

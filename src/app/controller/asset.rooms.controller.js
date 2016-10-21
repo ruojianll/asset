@@ -4,7 +4,7 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
     return arr.slice((page-1)*number, page*number);
   }
   $scope.pageChange = function(){
-    $scope.pageData = _slice($scope.rooms, $scope.currentPage, 5); 
+    $scope.pageData = _slice($scope.rooms,$scope.curPage, 5); 
   }
   $scope.$parent.$parent.currentPage = 2;
 	apiServ.post(
@@ -59,10 +59,14 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
             console.log(err)
           }
         )
+<<<<<<< HEAD
       }
 		}
 	)
       console.log(data)
+=======
+      // console.log(data)
+>>>>>>> 17902214e5f828c028c877dcfc6be98977ae1aaa
       
    }
   )
