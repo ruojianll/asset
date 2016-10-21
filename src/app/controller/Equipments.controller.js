@@ -9,7 +9,7 @@ angular.module("asset").controller("Equipments",function($scope,$http,environmen
   $scope.pageChange = function(){
     $scope.pageData = _slice($scope.f, $scope.currentPage, 5); 
   }  
-
+  $scope.$parent.$parent.currentPage = 3;
 //获取所有设备
 $scope.dian=false;
     apiServ.post(
