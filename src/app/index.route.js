@@ -5,7 +5,6 @@
   angular
     .module('asset')
     .config(routerConfig);
-
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
 
