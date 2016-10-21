@@ -1,4 +1,12 @@
 angular.module('asset').controller("assetRooms",function($scope,$http,environment,apiServ){
+  $scope.pageData = [];
+  function _slice(arr, page, number){
+    return arr.slice((page-1)*number, page*number);
+  }
+  $scope.pageChange = function(){
+    $scope.pageData = _slice($scope.rooms, $scope.currentPage, 5); 
+  }
+  $scope.$parent.$parent.currentPage = 2;
 	apiServ.post(
 		'/eqp/api/room/all',
         {}
@@ -16,6 +24,36 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
         ).then(
           function (data) {
             $scope.data2 = data
+  ).then(
+   function (data){
+     $scope.rooms = data;
+      apiServ.post(
+          '/eqp/api/building/all',
+          {}
+        ).then(
+          function (data) {            
+            $scope.buildings = data
+            $scope.pageData = _slice($scope.rooms,1,5)
+            // console.log($scope.buildings)
+            // _.each($scope.rooms,function(room){
+            //   var building = _.find($scope.buildings,function(building){
+            //     return room.building_id === building.id;
+            //   })
+            //   building = building || {};
+            //   room.building = building;
+            // })
+
+            for(var i in $scope.rooms){
+              var room = $scope.rooms[i];
+              room.building = {};
+              for(var k in $scope.buildings){
+                var building = $scope.buildings[k];
+                if(building.id === room.building_id){
+                  room.building = building;
+                  break;
+                }
+              }
+            }
           },
           function (err) {
             console.log(err)
@@ -24,25 +62,38 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
       }
 		}
 	)
+      console.log(data)
+      
+   }
+  )
+
+  $scope._active = function (x) {       
+    $scope.custom = $scope.pageData[x]
+    $scope.f = $scope.rooms[x].building.name+'('+$scope.rooms[x].building.location+')'
+  }
 
 	$scope._create = function () {
+    // alert($scope.buildings[0].id)
       setRom()
     }
     function setRom (){
+      // console.log($scope.f.id)
       apiServ.post(
         '/eqp/api/room/new',
         {
         'building_id':$scope.custom.building_id,
 		    'room_code':$scope.custom.code
+          	'building_id':$scope.aprent.id,
+		        'room_code':$scope.custom.code
         }
       ).then(
         function(){
-          $scope.f.push($scope.custom);
+          $scope.rooms.push($scope.custom);
           location.reload()
         },
         function(err){
-        	alert("创建失败")
-          console.log(err);
+        	Prompt("创建失败")
+          // console.log(err);
         }
       )
     }
@@ -61,10 +112,10 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
         }
       ).then(
         function(){
-          alert("修改成功！")
+          Prompt("修改成功！")
         },
         function(err){
-          alert("修改失败")
+          Prompt("修改失败")
         }
       )
     }
@@ -83,36 +134,39 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
         function(){
         	// alert(1)
           location.reload()
-          alert("删除成功！")
+          Prompt("删除成功！")
         },
         function(err){
         	// alert(2)
-          console.log(err);
+          // console.log(err);
         }
       )
     }
+
+    $scope.fn=function(index){
+      $scope.aprent=$scope.buildings[index];
+      $('#jxabc_building_details').val($('.jxabc_Droplist li').eq(index).html());
+      document.getElementsByClassName('jxabc_Droplist')[0].style.display='none';
+    }
+    $scope.over=function(){
+      boolean = true;
+    }
+    document.getElementById('jxabc_building_details').onfocus=function(){
+      console.log(1)
+      document.getElementsByClassName('jxabc_Droplist')[0].style.display='block';
+      // boolean = false;
+    }
+    document.getElementById('jxabc_building_details').onblur=function(){
+      if(boolean){
+        return false;
+      }
+      document.getElementsByClassName('jxabc_Droplist')[0].style.display='none';
+    }
+
 
     return {
         'setRom':setRom,
         'edtRom':edtRom,
         'delRom':delRom
-    }
-
-      /*$scope.totalItems = $('#jx_page').children('ul').length;*/
-      /*$scope.totalItems = 64;
-	  $scope.currentPage = 4;
-
-	  $scope.setPage = function (pageNo) {
-	    $scope.currentPage = pageNo;
-	  };
-
-	  $scope.pageChanged = function() {
-	    $log.log('Page changed to: ' + $scope.currentPage);
-	  };
-
-	  $scope.maxSize = 5;
-	  $scope.bigTotalItems = 175;
-	  $scope.bigCurrentPage = 1;*/
-
-
+    } 
 })
