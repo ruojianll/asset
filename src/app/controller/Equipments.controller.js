@@ -1,4 +1,3 @@
-
 angular.module("asset").controller("Equipments",function($scope,$http,environment,apiServ,accountServ,$log){
 
  //翻页 
@@ -7,9 +6,9 @@ angular.module("asset").controller("Equipments",function($scope,$http,environmen
     return arr.slice((page-1)*number, page*number);
   }
   $scope.pageChange = function(){
-    $scope.pageData = _slice($scope.f, $scope.currentPage, 5); 
+    $scope.pageData = _slice($scope.f, $scope.curPage, 5); 
   }  
-
+  $scope.$parent.$parent.currentPage = 3;
 //获取所有设备
 $scope.dian=false;
     apiServ.post(
