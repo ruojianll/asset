@@ -89,7 +89,6 @@ body{
 	top:0;
 	left:0;
 }
-
 .tit{
 	width:1200px;
 	height:52px;
@@ -122,17 +121,14 @@ header div {
 	margin: 0 auto;
 	height: 100%;
 }
-
-/* XQbuilding 开始 */
+/*building start*/
 .XQbuilding{
-  width:100%;
-  height:auto;
-  margin: 0 auto;
-  overflow: hidden;
+	width:100%;
+	height：auto;
+	overflow: hidden;
 }
-
 .XQinfo{
-	width:21rem;
+	width:26%;
 	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
@@ -142,13 +138,11 @@ header div {
   background-color: #fff;
   height: 224px;
 }
-.XQinfo ul {
-  display: block;
-  margin: 0 auto;
-  width: 83%;
-}
 .XQhead{
 	background: #fff;
+}
+.XQhead tr td{
+	font-weight: bold;
 }
 .XQinfo table tr td{
 	padding-left:10px;
@@ -156,23 +150,24 @@ header div {
 .XQinfo table thead {
   font-weight: bold;
 }
-
+.XQinfo ul{
+	margin: 30px 15px;
+}
 .XQedit{
-	width: 37rem;
-	height:208px;
+	width:44%;
+	height:auto;
 	background: #f2e7e5;
 	float: left;
 	margin-left: 5px;
 	padding: 10px;
 }
-
 .XQlist{
-  width:20.5rem; 
-  height:auto;
-  float: left;
-  margin-left: 5px;
-  background: #f2e7e5;
-  padding: 10px;
+	width:28%;
+	height: auto;
+	background:#f2e7e5;
+	float: left;
+	margin-left: 5px;
+	padding: 10px;
 }
 .XQlist table tbody {
   background-color: #fff;
@@ -181,16 +176,17 @@ header div {
   font-weight: bold;
 }
 .XQlist table tr td{
-  padding-left: 10px;
+	padding-left: 10px;
 }
 .qq{
-  float: left;
-  margin-right: 10px;
-  color:#787677;
-  font-weight:bold;
+	margin-left: 5px;
+	color:#787677;
+	font-weight:bold;
+	float: left;
+	padding: 10px;
+	width: auto;
 }
-/* XQbuilding 结束 */
-
+/*building end*/
 header span {
 	display: inline-block;
 	width: 41px;
@@ -221,8 +217,6 @@ header p b {
 	height: auto;
 	margin: 31px auto 0;
 }
-
-
 /*页面样式*/
 .fx {
   width: 376px;
@@ -265,7 +259,9 @@ button{
   padding: 10px 15px;
 
 }
-
+.main>div:nth-child(1) ul {
+	margin: 30px 0 10px 0;
+}
 .box p{
 	font-size:24px;
 	color:#333;
@@ -303,24 +299,16 @@ button{
 	height:34px;
 	outline:none;
 }
-.btn-default{
-	/*width:60px;*/
-	width:auto;
+
+.ck{
+	width:67px;
 	height:36px;
 	outline:none;
-	/*margin:0 auto;*/
 	color:#787677;
 	font-weight:bold;
-	/*margin-left:120px;*/
-	width: auto;
-	width:82px;
-	height:36px;
-	outline:none;
 	margin:0 auto;
-	/*width: auto;*/
 	display: block;
 }
-
 .user{
 	width: auto;
 	height: 100%;
@@ -483,7 +471,6 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
-
 .fx{
 	display:inline-block;
 	width:376px;
@@ -564,8 +551,16 @@ ul,ol,li{
 .main>div div h5 {
 	font-weight: bold;
 }
+.main>div div span {
+	display: flex;
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+
+}
 .main>div div button {
-	color: #7B7979;
+		color: #7B7979;
+	height: auto;
+	padding: 8px 10px;
 	margin-top: 6px;
 	background: #F5F2F2;
     border: 1px solid #ccc;

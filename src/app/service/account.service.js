@@ -7,9 +7,9 @@ angular.module('asset').service('accountServ',function(environment,$http,apiServ
 	            var token = data.web_token;
 	            localStorage['user_id'] = user_id;
 	            localStorage['web_token'] = token;
-	           	localStorage.username=$(".name").val();
+	           	sessionStorage.username=$(".name").val();
 				Prompt('登录成功');
-				$('#loginin').html(localStorage.username)
+				$('#loginin').html(sessionStorage.username)
 				$state.go("signIn.assets");
 	        },
 	        function(err){
@@ -17,11 +17,6 @@ angular.module('asset').service('accountServ',function(environment,$http,apiServ
 	        }
         )
     }
-//  var breack=function(){
-//  	localStorage.username=$(".name").val();
-//  	Prompt('登录成功')
-//		$state.go("signIn");
-//  }
     var logout = function(){
         delete localStorage['user_id'];
         delete localStorage['web_token'];
