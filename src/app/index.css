@@ -1,3 +1,36 @@
+.m_big{
+	width:882px;
+	height:auto;
+	text-align: left;
+}
+.fx {
+	display:inline-block;
+	width: 376px;
+	min-height: 208px;
+	box-sizing: border-box;
+	padding: 10px;
+	background: #f7e8e3;
+}
+.m_box{
+	display:inline-block;
+	width:501px;
+	height:378px;
+	background:#f7e8e3;
+	padding:16px 11px;
+	float:right;
+}
+.m_box .form-group{
+	margin-bottom:8px;
+}
+.m_box label{
+	margin-bottom: 0px;
+}
+
+.m_box .btn{
+	margin-top: 5px;
+	width:auto;
+	margin-left: 0;
+}
 body{
 	width:100%;
 	height: 100vh;
@@ -90,7 +123,7 @@ header {
 header div {
 	width: 77.4%;
 	margin: 0 auto;
-	height: 100%
+	height: 100%;
 }
 
 .XQinfo{
@@ -191,6 +224,49 @@ header p b {
 	width: 251px;
 	width:21%;
 	min-height: 207px;
+
+}
+
+/*页面样式*/
+.fx {
+  width: 376px;
+  min-height: 208px;
+  box-sizing: border-box;
+  padding: 10px;
+  float: left;
+}
+.fx table {
+  opacity: 1;
+}
+.fx ul {
+  opacity: 1;
+}
+
+.jxbig{
+	width:503px;
+  height:227px;
+  background: #f6ebe7;
+  padding:15px 11px;
+  margin-left: 4px;
+  float: left;
+}
+label{
+  color: #333438;
+  font-size: 10px;
+}
+input{
+  width:478px;
+  height: 35px;
+ /* border: 1px solid #cccbc7;
+  background: #fff;*/
+  color: #000;
+  font-size: 10px;
+  line-height: 35px;
+}
+button{
+  width: auto;
+  height: 34px;
+  padding: 10px 15px;
 
 }
 .main>div:nth-child(1) ul {
@@ -303,6 +379,15 @@ header p b {
 	outline:none;
 }
 .btn-default{
+	/*width:60px;*/
+	width:auto;
+	height:36px;
+	outline:none;
+	/*margin:0 auto;*/
+	color:#787677;
+	font-weight:bold;
+	/*margin-left:120px;*/
+	width: auto;
 	width:82px;
 	height:36px;
 	outline:none;
@@ -354,7 +439,7 @@ header p b {
 	clear: both;
 	padding-top: 2rem;
 	/*padding-top: 2rem;*/
-	width: 100%
+	width: 100%;
 }
 .Prompt{
     display: block;

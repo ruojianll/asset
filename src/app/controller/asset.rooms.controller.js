@@ -10,6 +10,20 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
 	apiServ.post(
 		'/eqp/api/room/all',
         {}
+	).then(
+		function (data){
+			$scope.f = data;
+			$scope._active = function (x) {
+        $scope.custom = $scope.f[x]
+        console.log($scope.custom)
+        apiServ.post(
+          '/eqp/api/room/all',
+          {
+            'building_id': $scope.custom.id
+          }
+        ).then(
+          function (data) {
+            $scope.data2 = data
   ).then(
    function (data){
      $scope.rooms = data;
@@ -45,7 +59,14 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
             console.log(err)
           }
         )
+<<<<<<< HEAD
+      }
+		}
+	)
+      console.log(data)
+=======
       // console.log(data)
+>>>>>>> 17902214e5f828c028c877dcfc6be98977ae1aaa
       
    }
   )
@@ -64,6 +85,8 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
       apiServ.post(
         '/eqp/api/room/new',
         {
+        'building_id':$scope.custom.building_id,
+		    'room_code':$scope.custom.code
           	'building_id':$scope.aprent.id,
 		        'room_code':$scope.custom.code
         }
