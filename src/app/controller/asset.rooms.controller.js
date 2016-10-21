@@ -4,12 +4,27 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
     return arr.slice((page-1)*number, page*number);
   }
   $scope.pageChange = function(){
-    $scope.pageData = _slice($scope.rooms, $scope.currPage, 5); 
+    $scope.pageData = _slice($scope.rooms, $scope.currPage, 5);
+    $scope.pageData = _slice($scope.rooms,$scope.curPage, 5); 
   }
   $scope.$parent.$parent.currentPage = 2;
 	apiServ.post(
 		'/eqp/api/room/all',
         {}
+	).then(
+		function (data){
+			$scope.f = data;
+			$scope._active = function (x) {
+        $scope.custom = $scope.f[x]
+        console.log($scope.custom)
+        apiServ.post(
+          '/eqp/api/room/all',
+          {
+            'building_id': $scope.custom.id
+          }
+        ).then(
+          function (data) {
+            $scope.data2 = data
   ).then(
    function (data){
      $scope.rooms = data;
@@ -21,31 +36,35 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
             $scope.buildings = data
             $scope.pageData = _slice($scope.rooms,1,5)
             // console.log($scope.buildings)
-            // _.each($scope.rooms,function(room){
-            //   var building = _.find($scope.buildings,function(building){
-            //     return room.building_id === building.id;
-            //   })
-            //   building = building || {};
-            //   room.building = building;
-            // })
+            _.each($scope.rooms,function(room){
+              var building = _.find($scope.buildings,function(building){
+                return room.building_id === building.id;
+              })
+              building = building || {};
+              room.building = building;
+            })
 
-            for(var i in $scope.rooms){
-              var room = $scope.rooms[i];
-              room.building = {};
-              for(var k in $scope.buildings){
-                var building = $scope.buildings[k];
-                if(building.id === room.building_id){
-                  room.building = building;
-                  break;
-                }
-              }
-            }
+            // for(var i in $scope.rooms){
+            //   var room = $scope.rooms[i];
+            //   room.building = {};
+            //   for(var k in $scope.buildings){
+            //     var building = $scope.buildings[k];
+            //     if(building.id === room.building_id){
+            //       room.building = building;
+            //       break;
+            //     }
+            //   }
+            // }
           },
           function (err) {
             console.log(err)
           }
         )
+      }
+		}
+	)
       console.log(data)
+      // console.log(data)
       
    }
   )
@@ -64,6 +83,8 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
       apiServ.post(
         '/eqp/api/room/new',
         {
+        'building_id':$scope.custom.building_id,
+		    'room_code':$scope.custom.code
           	'building_id':$scope.aprent.id,
 		        'room_code':$scope.custom.code
         }

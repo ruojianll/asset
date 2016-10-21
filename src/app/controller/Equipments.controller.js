@@ -1,8 +1,14 @@
-angular.module("asset").controller("Equipments",function($scope,$http,environment,apiServ,accountServ){
-	$scope.maxSize = 1;
-	$scope.bigTotalItems = 175;
-	$scope.bigCurrentPage = 1;
-  $scope.$parent.$parent.currentPage = 3;
+
+angular.module("asset").controller("Equipments",function($scope,$http,environment,apiServ,accountServ,$log){
+
+ //翻页 
+  $scope.pageData = [];
+  function _slice(arr, page, number){
+    return arr.slice((page-1)*number, page*number);
+  }
+  $scope.pageChange = function(){
+    $scope.pageData = _slice($scope.f, $scope.currentPage, 5); 
+  }  
 
 //获取所有设备
 $scope.dian=false;
@@ -11,23 +17,18 @@ $scope.dian=false;
     	{}
     ).then(
         function (data){
-        	//alert(1)
-        	console.log(data)
             $scope.f=data
-             $scope.show=function(i){
-                // $scope.dian=!$scope.dian;
-                //     // console.log($index)
-                //     console.log($scope.a[$index])
-                //     $scope.b = $scope.a[$index]
-                $scope.equipments = $scope.f[i]
-             }
+            $scope.pageData = _slice($scope.f,1,5)
+            $scope.show=function(i){
+                $scope.equipments = $scope.pageData[i]
+            }
         },
         function (err){
 //      	alert(2)
             console.log(err)
         }
     )
-
+ 
 //新建设备
    $scope.create = function(){
         setBud()
@@ -45,7 +46,7 @@ $scope.dian=false;
          }
        ).then(
          function(){
-            alert('添加成功')
+            Prompt('添加成功')
             $scope.f.push($scope.equipments);
             location.reload()
          },
@@ -72,7 +73,8 @@ $scope.dian=false;
         }
       ).then(
         function(){
-          alert("修改成功！")
+          Prompt("修改成功！")
+          $scope.equipments = ''
         },
         function(err){
           console.log(err);
@@ -93,14 +95,13 @@ $scope.dian=false;
         }
       ).then(
         function(){
+          Prompt("删除成功！")
           location.reload()
-          alert("删除成功！")
         },
         function(err){
-            alert('失败')
-          console.log(err);
+            //Prompt('失败')
+            console.log(err);
         }
       )
     }
-
 });
