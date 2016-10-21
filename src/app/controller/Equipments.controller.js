@@ -1,3 +1,4 @@
+
 angular.module("asset").controller("Equipments",function($scope,$http,environment,apiServ,accountServ,$log){
 
  //翻页 
@@ -16,12 +17,10 @@ $scope.dian=false;
     	{}
     ).then(
         function (data){
-        	//alert(1)
-        	//console.log(data)
             $scope.f=data
             $scope.pageData = _slice($scope.f,1,5)
             $scope.show=function(i){
-                $scope.equipments = $scope.f[i]
+                $scope.equipments = $scope.pageData[i]
             }
         },
         function (err){
@@ -29,8 +28,7 @@ $scope.dian=false;
             console.log(err)
         }
     )
-
-  
+ 
 //新建设备
    $scope.create = function(){
         setBud()
@@ -48,7 +46,7 @@ $scope.dian=false;
          }
        ).then(
          function(){
-            alert('添加成功')
+            Prompt('添加成功')
             $scope.f.push($scope.equipments);
             location.reload()
          },
@@ -75,7 +73,7 @@ $scope.dian=false;
         }
       ).then(
         function(){
-          alert("修改成功！")
+          Prompt("修改成功！")
           $scope.equipments = ''
         },
         function(err){
@@ -97,14 +95,13 @@ $scope.dian=false;
         }
       ).then(
         function(){
-          alert("删除成功！")
+          Prompt("删除成功！")
           location.reload()
         },
         function(err){
-            alert('失败')
+            //Prompt('失败')
             console.log(err);
         }
       )
     }
-
 });
