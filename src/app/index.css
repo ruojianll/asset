@@ -136,7 +136,8 @@ header div {
 }
 .XQinfo table{
   background-color: #fff;
-  height: 224px;
+  /*height: 224px;*/
+  width: 100%;
 }
 .XQhead{
 	background: #fff;
@@ -217,6 +218,7 @@ header p b {
 	height: auto;
 	margin: 31px auto 0;
 }
+
 /*页面样式*/
 .fx {
   width: 376px;
@@ -514,6 +516,7 @@ ul,ol,li{
 }
 .main div table {
 	float: left;
+	width: 100%;
 }
 .main div table tr{
 	cursor: pointer;
