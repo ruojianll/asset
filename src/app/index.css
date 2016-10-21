@@ -306,9 +306,7 @@ header p b {
 	width:82px;
 	height:36px;
 	outline:none;
-	margin:0 auto;
-	/*width: auto;*/
-	display: block;
+	display: inline-block;
 }
 .qq{
 	margin-left: 0;

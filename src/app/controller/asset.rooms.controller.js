@@ -4,7 +4,7 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
     return arr.slice((page-1)*number, page*number);
   }
   $scope.pageChange = function(){
-    $scope.pageData = _slice($scope.rooms, $scope.currentPage, 5); 
+    $scope.pageData = _slice($scope.rooms, $scope.currPage, 5); 
   }
   $scope.$parent.$parent.currentPage = 2;
 	apiServ.post(
