@@ -1,11 +1,12 @@
 <div class="XQbuilding" ng-controller = "budCtrl">
+  <div class="Prompt"></div>
 	<div class="XQinfo">
-		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb" id="example" class='table table-hover'>
+		<table border="1" cellpadding="0" cellspacing="0" style="border:1px solid #e0dcdb" class='table table-hover'>
 			<thead height="37" class="XQhead">
 			  <tr>
-			    <td width="40">id</td>
-  				<td width="80">name</td>
-  				<td width="105">location</td>
+			    <th width="40">id</th>
+  				<th width="80">name</th>
+  				<th width="105">location</th>
 			  </tr>
 			</thead>
 			<tbody>
@@ -16,7 +17,7 @@
   			</tr>
 			</tbody>
 		</table>
-		<ul uib-pagination boundary-links="true" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" total-items="data1.length" ng-model="currentPage" ng-change="pagechange()" items-per-page="5" ></ul>
+		<ul uib-pagination boundary-links="true" max-size='3' total-items="data1.length" ng-change="pageChange()" items-per-page="5" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
 	</div>
 	<div class="XQedit">
 		<div class="form-group">
@@ -27,8 +28,8 @@
 	      <label>Location</label>
 	      <input type="text" class="form-control" ng-model = 'custom.location' value = '{{custom.location}}'>
 	    </div>
-	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_edit()'>Edit({{custom.id+':'+custom.name}})</button>
-	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_delete()'>Delete({{custom.id+':'+custom.name}})</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_edit()'>Edit({{custom.id+":"+custom.name}})</button>
+	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" t15]ype="button" class="btn btn-default qq" ng-click = '_delete()'>Delete({{custom.id+":"+custom.name}})</button>
 	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_create()'>Create</button>
 	</div>
 	<div class="XQlist" ng-show = 'qq'>
