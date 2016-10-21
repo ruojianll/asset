@@ -471,6 +471,16 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
+.jxabc_Droplist>li{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: "微软雅黑";
+	font-weight:bold;
+}
+.jxabc_Droplist>li:hover{
+	color:#D8A2A6;
+	cursor: pointer;
+}
 .fx{
 	display:inline-block;
 	width:376px;
