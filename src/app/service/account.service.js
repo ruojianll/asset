@@ -8,11 +8,9 @@ angular.module('asset').service('accountServ',function(environment,$http,apiServ
 	            localStorage['user_id'] = user_id;
 	            localStorage['web_token'] = token;
 	           	localStorage.username=$(".name").val();
-//	           	$scope.username=localStorage.username;
 				Prompt('登录成功');
 				$('#loginin').html(localStorage.username)
 				$state.go("signIn");
-	            // window.location.href='app/template/assets.template.html'
 	        },
 	        function(err){
 	

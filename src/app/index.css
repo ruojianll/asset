@@ -38,7 +38,7 @@ body{
 	background:url(../assets/images/bg.png) no-repeat;
 	background-size:cover;
 	position: relative;
-	overflow:hidden;
+	-overflow:hidden;
 }
 .head{
 	width: 100%;
@@ -119,12 +119,11 @@ body{
 }
 
 .XQinfo{
-	width:251px;
-	max-height:300px;
+	width:28%;
+	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
 	float: left;
-	overflow: auto;
 }
 .XQinfo table{
   background-color: #fff;
@@ -151,12 +150,13 @@ body{
 	padding: 11px;
 }
 .XQinfo ul{
-	margin: 40px auto;
+	margin: 0 auto;
 }
 .main div table {
 	float: left;
 }
 .main div table tr{
+	cursor: pointer;
 	height: 37px;
 	background: #f9f9f9;
 }
@@ -172,7 +172,7 @@ body{
 }
 .main>div:nth-child(1) {
 	margin: 0;
-	width: 218px;
+	width:21%;
 	min-height: 207px;
 
 }
@@ -180,7 +180,7 @@ body{
 	margin: 30px 0 10px 0;
 }
 .XQedit{
-	width:440px;
+	width:44%;
 	height:auto;
 	background: #f2e7e5;
 	float: left;
@@ -189,8 +189,8 @@ body{
 
 }
 .XQlist{
-	width:246px; 
-	height:125px;
+	width:25%; 
+	height:auto;
 	float: left;
 	margin-left: 5px;
 	background: #f2e7e5;
@@ -206,11 +206,12 @@ body{
 	padding-left: 10px;
 }
 .main>div:nth-child(2) {
-	width: 130px;
+	width: 14%;
+	min-height: 100px;
 }
 .main>div:nth-child(3) {
-	width: 600px;
-	height: 207px;
+	width: 64%;
+	min-height: 207px;
 }
 .main>div:nth-child(3) table {
 	width: 58%;
@@ -248,12 +249,20 @@ body{
 }
 
 .main>div div .dropdown-menu {
-	display: block;
-	padding: 0 14px;
+	display: none;
 	top: 69px;
 }
 .main>div div ul li {
+	cursor: pointer;
+	padding: 0 14px;
 	line-height: 27px;
+}
+/* .main div div .list {
+	display: none !importment;
+} */
+.main div div .list li:hover {
+	color: #fff;
+	background: #347AB6;
 }
 .box p{
 	font-size:24px;
@@ -360,7 +369,7 @@ body{
 }
 .menu>div{
 	clear: both;
-	padding-top: 2rem;
+	/*padding-top: 2rem;*/
 	width: 100%
 }
 .Prompt{

@@ -30,14 +30,14 @@
         url:"/-Buildings",
         views:{
         	'content':{
-        		templateUrl:'app/template/assets.template.html'
+        		templateUrl:'app/template/buildings.template.html'
         	}
         }
       }).state("signIn.equipments",{
         url:"/-Equipments",
         views:{
         	'content':{
-        		templateUrl:'app/template/equipments.template.html'
+        		templateUrl:'app/template/Equipments.template.html'
         	}
         }
       }).state("signIn.rooms",{
@@ -47,18 +47,6 @@
         		templateUrl:'app/template/asset.rooms.html'
         	}
         }
-      }).state("assets",{
-        url:"/signIn/-Assets",
-        templateUrl:'app/template/assets.template.html'
-      }).state("buildings",{
-        url:"/signIn/-Buildings",
-        templateUrl:'app/template/buildings.template.html'
-      }).state("equipments",{
-        url:"/signIn/-Equipments",
-        templateUrl:'app/template/equipments.template.html'
-      }).state("rooms",{
-        url:"/signIn/-Rooms",
-        templateUrl:'app/template/asset.rooms.html'
       })
   }
 })();

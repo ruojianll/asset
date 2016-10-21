@@ -3,9 +3,9 @@ angular.module('asset').controller('up',function($scope,accountServ,environment)
 //	  $scope.username=localStorage.username;
 	  $scope.out=function(){
 	  	accountServ.logout();
-	  	localStorage.clear()
+	  	localStorage.clear();
 	  	$('#loginin').html('未登录');
 //	  	$scope.ncc = 'weidenglu';
-	  	location.reload()
+//	  	location.reload()
 	  }
 })
