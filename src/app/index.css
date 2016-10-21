@@ -14,7 +14,7 @@ body{
 	left: 0;
 	background: #fff;
 	opacity: 0.3;
-	z-index: 1
+	z-index: 1;
 }
 .login{
 	width: 80%;
@@ -57,9 +57,6 @@ body{
 	left:0;
 }
 
-.XQbuilding{
-	width:90%;
-}
 .tit{
 	width:1200px;
 	height:52px;
@@ -93,22 +90,33 @@ header div {
 	height: 100%
 }
 
+/* XQbuilding 开始 */
+.XQbuilding{
+  width:100%;
+  height:auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .XQinfo{
-	width:251px;
-	max-height:300px;
+	width:21rem;
+	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
 	float: left;
-	overflow: auto;
 }
 .XQinfo table{
   background-color: #fff;
+  height: 224px;
 }
-
+.XQinfo ul {
+  display: block;
+  margin: 0 auto;
+  width: 83%;
+}
 .XQhead{
 	background: #fff;
 }
-
 .XQinfo table tr td{
 	padding-left:10px;
 }
@@ -117,13 +125,33 @@ header div {
 }
 
 .XQedit{
-	width: 500px;
+	width: 37rem;
 	height:208px;
 	background: #f2e7e5;
 	float: left;
 	margin-left: 5px;
 	padding: 10px;
 }
+
+.XQlist{
+  width:20.5rem; 
+  height:125px;
+  float: left;
+  margin-left: 5px;
+  background: #f2e7e5;
+  padding: 10px;
+}
+.XQlist table tbody {
+  background-color: #fff;
+}
+.XQlist table thead {
+  font-weight: bold;
+}
+.XQlist table tr td{
+  padding-left: 10px;
+}
+/* XQbuilding 结束 */
+
 header span {
 	display: inline-block;
 	width: 41px;
@@ -191,25 +219,6 @@ header p b {
 }
 .main>div:nth-child(1) ul {
 	margin: 30px 0 10px 0;
-}
-
-.XQlist{
-	width:400px; 
-	height:125px;
-	float: left;
-	margin-left: 5px;
-	background: #f2e7e5;
-	padding: 10px;
-}
-.XQlist table tbody {
-  background-color: #fff;
-}
-.XQlist table thead {
-  font-weight: bold;
-}
-
-.XQlist table tr td{
-	padding-left: 10px;
 }
 
 .main>div:nth-child(2) {
@@ -282,6 +291,10 @@ header p b {
 	margin-left:120px;
 	color:#787677;
 	font-weight:bold;
+	width: auto;
+}
+.qq{
+  margin-left: 0;
 }
 .user{
 	width: 8rem;

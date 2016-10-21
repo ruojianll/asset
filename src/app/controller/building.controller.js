@@ -4,6 +4,15 @@ angular.module("asset").controller("budCtrl", function (accountServ, $scope, env
 
   getBud()
   
+  //分页;
+  $scope.pageData = [];
+  function _slice(arr, page, number){
+    return arr.slice((page-1)*number, page*number);
+  }
+  $scope.pageChange = function(){
+    $scope.pageData = _slice($scope.data1, $scope.currentPage, 5);
+  }
+   
   // 获取建筑；
     function getBud () {
       apiServ.post(
@@ -14,13 +23,11 @@ angular.module("asset").controller("budCtrl", function (accountServ, $scope, env
           $scope.data1 = data;
           
           // 分页；
-//        $('#example').dataTable({
-//          "pagingType": "full_numbers"
-//        })
+          $scope.pageData = _slice($scope.data1, 1, 5);
           
           $scope._show = function (i) {
             $scope.qq = true
-            $scope.custom = $scope.data1[i]
+            $scope.custom = $scope.pageData[i]
 
             // 获取房间号；
             apiServ.post(
@@ -57,7 +64,8 @@ angular.module("asset").controller("budCtrl", function (accountServ, $scope, env
         }
       ).then(
         function(){
-          $scope.data1.push($scope.custom);
+          $scope.data1.push($scope.custom)
+          $(".form-control").val("")
           location.reload()
         },
         function(err){
@@ -80,7 +88,8 @@ angular.module("asset").controller("budCtrl", function (accountServ, $scope, env
         }
       ).then(
         function(){
-          alert("修改成功！")
+          $(".form-control").val("")
+          Prompt('修改成功！')
         },
         function(err){
           console.log(err);
@@ -100,9 +109,9 @@ angular.module("asset").controller("budCtrl", function (accountServ, $scope, env
         }
       ).then(
         function(){
-//        $scope.data1.splice($scope.data1.indexOf(data), 1);
+          $(".form-control").val("")
           location.reload()
-          alert("删除成功！")
+          Prompt("删除成功！")
         },
         function(err){
           console.log(err);
