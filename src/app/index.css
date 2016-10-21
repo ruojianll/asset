@@ -516,6 +516,7 @@ ul,ol,li{
 	padding: 11px;
 }
 .main div table {
+	width: 100%;
 	float: left;
 }
 .main div table tr{
