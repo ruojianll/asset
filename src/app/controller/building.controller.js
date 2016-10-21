@@ -1,7 +1,5 @@
-
 // 建筑 building;
-angular.module("asset").controller("budCtrl", function (accountServ, $scope, environment, apiServ) {
-
+angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope, environment, apiServ) {
   getBud()
   
   //分页;

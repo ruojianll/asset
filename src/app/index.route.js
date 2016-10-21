@@ -5,28 +5,48 @@
   angular
     .module('asset')
     .config(routerConfig);
+
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
+
+		$urlRouterProvider.otherwise('/index');
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'app/template/login2.template.html',
+      }).state("out",{
+        url:"/index",
+        templateUrl:'app/template/login.template.html'
       }).state("signIn",{
         url:"/signIn",
         templateUrl:'app/template/config.template.html'
       }).state("signIn.assets",{
-        url:"/assets",
-        templateUrl:'app/template/assets.template.html'
+        url:"/-Assets",
+        views:{
+        	'content':{
+        		templateUrl:'app/template/assets.template.html'
+        	}
+        }
       }).state("signIn.buildings",{
-        url:"/buildings",
-        templateUrl:'app/template/buildings.template.html'
+        url:"/-Buildings",
+        views:{
+        	'content':{
+        		templateUrl:'app/template/buildings.template.html'
+        	}
+        }
       }).state("signIn.equipments",{
-        url:"/equipments",
-        templateUrl:'app/template/equipments.template.html'
+        url:"/-Equipments",
+        views:{
+        	'content':{
+        		templateUrl:'app/template/Equipments.template.html'
+        	}
+        }
       }).state("signIn.rooms",{
-        url:"/rooms",
-        templateUrl:'app/template/rooms.template.html'
+        url:"/-Rooms",
+        views:{
+        	'content':{
+        		templateUrl:'app/template/asset.rooms.html'
+        	}
+        }
       })
-    // $urlRouterProvider.otherwise('signIn.assets');
   }
-  
 })();
