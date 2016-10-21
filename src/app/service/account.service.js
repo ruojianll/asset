@@ -10,7 +10,7 @@ angular.module('asset').service('accountServ',function(environment,$http,apiServ
 	           	sessionStorage.username=$(".name").val();
 				Prompt('登录成功');
 				$('#loginin').html(sessionStorage.username)
-				$state.go("signIn");
+				$state.go("signIn.assets");
 	        },
 	        function(err){
 	
