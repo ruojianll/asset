@@ -89,7 +89,6 @@ body{
 	top:0;
 	left:0;
 }
-
 .tit{
 	width:1200px;
 	height:52px;
@@ -122,17 +121,14 @@ header div {
 	margin: 0 auto;
 	height: 100%;
 }
-
-/* XQbuilding 开始 */
+/*building start*/
 .XQbuilding{
-  width:100%;
-  height:auto;
-  margin: 0 auto;
-  overflow: hidden;
+	width:100%;
+	height：auto;
+	overflow: hidden;
 }
-
 .XQinfo{
-	width:21rem;
+	width:26%;
 	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
@@ -140,15 +136,14 @@ header div {
 }
 .XQinfo table{
   background-color: #fff;
-  height: 224px;
-}
-.XQinfo ul {
-  display: block;
-  margin: 0 auto;
-  width: 83%;
+  /*height: 224px;*/
+  width: 100%;
 }
 .XQhead{
 	background: #fff;
+}
+.XQhead tr td{
+	font-weight: bold;
 }
 .XQinfo table tr td{
 	padding-left:10px;
@@ -156,23 +151,24 @@ header div {
 .XQinfo table thead {
   font-weight: bold;
 }
-
+.XQinfo ul{
+	margin: 30px 15px;
+}
 .XQedit{
-	width: 37rem;
-	height:208px;
+	width:44%;
+	height:auto;
 	background: #f2e7e5;
 	float: left;
 	margin-left: 5px;
 	padding: 10px;
 }
-
 .XQlist{
-  width:20.5rem; 
-  height:auto;
-  float: left;
-  margin-left: 5px;
-  background: #f2e7e5;
-  padding: 10px;
+	width:28%;
+	height: auto;
+	background:#f2e7e5;
+	float: left;
+	margin-left: 5px;
+	padding: 10px;
 }
 .XQlist table tbody {
   background-color: #fff;
@@ -181,17 +177,17 @@ header div {
   font-weight: bold;
 }
 .XQlist table tr td{
-  padding-left: 10px;
+	padding-left: 10px;
 }
 .qq{
-  width: auto;
-  float: left;
-  margin-right: 10px;
-  color:#787677;
-  font-weight:bold;
+	margin-left: 5px;
+	color:#787677;
+	font-weight:bold;
+	float: left;
+	padding: 10px;
+	width: auto;
 }
-/* XQbuilding 结束 */
-
+/*building end*/
 header span {
 	display: inline-block;
 	width: 41px;
@@ -221,44 +217,6 @@ header p b {
 	width: 1254px;
 	height: auto;
 	margin: 31px auto 0;
-}
-
-.main {
-	display: flex;
-	width: 1254px;
-	height: auto;
-	margin: 0 auto;
-}
-.main>div {
-	margin-left: 4px;
-	float: left;
-	background: #f1e6e2;
-	padding: 11px;
-}
-
-.main div table {
-	float: left;
-}
-.main div table tr{
-	cursor: pointer;
-	height: 37px;
-	background: #f9f9f9;
-}
-.main div table tr:nth-child(1){
-	background: #fff;
-}
-.main div table tr:first-child {
-	font-weight: bold;
-}
-.main div table td{
-	border: 1px solid #ddd;
-	padding-left: 9px;
-}
-.main>div:nth-child(1) {
-	margin: 0;
-	width: 251px;
-	width:21%;
-	min-height: 207px;
 }
 
 /*页面样式*/
@@ -303,7 +261,9 @@ button{
   padding: 10px 15px;
 
 }
-
+.main>div:nth-child(1) ul {
+	margin: 30px 0 10px 0;
+}
 .box p{
 	font-size:24px;
 	color:#333;
@@ -341,6 +301,7 @@ button{
 	height:34px;
 	outline:none;
 }
+
 .ck{
 	width:67px;
 	height:36px;
@@ -350,7 +311,6 @@ button{
 	margin:0 auto;
 	display: block;
 }
-
 .user{
 	width: auto;
 	height: 100%;
@@ -513,7 +473,6 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
-
 .fx{
 	display:inline-block;
 	width:376px;
@@ -547,6 +506,7 @@ ul,ol,li{
 }
 .main div table {
 	float: left;
+	width: 100%;
 }
 .main div table tr{
 	cursor: pointer;
