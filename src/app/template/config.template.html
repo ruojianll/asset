@@ -9,6 +9,62 @@
 	    </uib-tabset>
 	</div>
 	<div ui-view="content">
-		
-	</div> 
+		<section class="main" ng-controller='assetsController'>
+			<div>
+				<table>
+					<tr>
+						<td width="85px">name</td>
+						<td width="110px">location</td>   
+					</tr>
+					<tr id={{i.id}} ng-click="show1($index)" ng-repeat="i in buildings">
+						<td>{{i.name}}</td>
+						<td>{{i.location}}</td>   
+					</tr>
+				</table>
+		    	<ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></ul>
+			</div>
+			<div ng-show="flag1">
+				<table>
+					<tr>
+						<td width="130px">code</td>  
+					</tr>
+					<tr id={{i.id}} ng-click="show2($index)" ng-repeat="i in rooms">
+						<td>{{i.code}}</td>  
+					</tr>
+				</table>
+			</div>
+			<div ng-show="flag2">
+				<table>
+					<tr bgcolor="#fff">
+						<td width="45px">id</td>  
+						<td width="85px">name</td>  
+						<td width="75px">type</td>  
+						<td width="105px">factory</td>  
+						<td width="115px">number</td>
+					</tr>
+					<tr ng-repeat="i in equipments" ng-click="show3($index)" id={{i.id}}>
+						<td>{{i.equipment_id}}</td>
+						<td>{{i.equipment_name}}</td>
+						<td>{{i.equipment_type}}</td>
+						<td>{{i.equipment_factory}}</td>
+						<td>{{i.number}}</td>
+					</tr>
+				</table>
+				<div>
+					<h5>Equipment</h5>
+				    <input type="text" class="form-control" ng-model="f" id="name">
+					<ul class="dropdown-menu" ng-show="flag3">
+						<li ng-repeat="i in states | filter:f">{{i.name+'('+i.type+')'}}</li>
+					</ul>
+
+				    <h5>number</h5>
+				    <input type="text" ng-model="selected" class="form-control" id="num">
+
+				    <button type="button" ng-click="edit()" ng-disabled="isDisabled">Edit(:)</button>     
+				    <button type="button" ng-click="delete()" ng-disabled="isDisabled">Delete(:)</button>
+				    <button type="button" ng-click="creat()" class="hover">Create</button>
+				</div>
+			</div>
+		</section>
+	</div>
 </div>

@@ -97,15 +97,21 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 
 	}
 	$scope.creat=function(){
-		alert(0)
-		var asset_number=$('#num').val();
-		apiServ.post('/eqp/api/asset/new',{equipment_id:$scope.equipment.id,
-	    room_id:$scope.room_id,
-	    asset_number:asset_number}).then(function(data){
-	    	$scope.show2(0)
-	    	$('#name').val('');
-			$('#num').val('');
-	    })
+		if($('#name').val()!=='' && $('#num').val()!==''){
+			var asset_number=$('#num').val();
+			apiServ.post('/eqp/api/asset/new',{equipment_id:$scope.equipment.id,
+		    room_id:$scope.room_id,
+		    asset_number:asset_number}).then(function(data){
+		    	$scope.show2(0)
+		    	$('#name').val('');
+				$('#num').val('');
+		    	$('#name').empty();
+				$('#num').empty();
+		    })
+		}else {
+			Prompt('请完善信息');
+		}
+			
 	}
 	//设备列表 添加设备
 	$scope.fn=function(index){
