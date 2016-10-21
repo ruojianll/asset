@@ -14,7 +14,7 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
 	).then(
 		function (data){
 			$scope.f = data;
-			$scope._active = function (x) {
+			$scope._active = function (x){
         $scope.custom = $scope.f[x]
         console.log($scope.custom)
         apiServ.post(
@@ -23,63 +23,42 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
             'building_id': $scope.custom.id
           }
         ).then(
-          function (data) {
-            $scope.data2 = data
-  ).then(
-   function (data){
-     $scope.rooms = data;
-      apiServ.post(
-          '/eqp/api/building/all',
-          {}
-        ).then(
-          function (data) {            
-            $scope.buildings = data
-            $scope.pageData = _slice($scope.rooms,1,5)
-            // console.log($scope.buildings)
-            _.each($scope.rooms,function(room){
-              var building = _.find($scope.buildings,function(building){
-                return room.building_id === building.id;
-              })
-              building = building || {};
-              room.building = building;
-            })
-
-            // for(var i in $scope.rooms){
-            //   var room = $scope.rooms[i];
-            //   room.building = {};
-            //   for(var k in $scope.buildings){
-            //     var building = $scope.buildings[k];
-            //     if(building.id === room.building_id){
-            //       room.building = building;
-            //       break;
-            //     }
-            //   }
-            // }
-          },
-          function (err) {
-            console.log(err)
+         function (data){
+           $scope.rooms = data;
+            apiServ.post(
+                '/eqp/api/building/all',
+                {}
+              ).then(
+                function (data){            
+                  $scope.buildings = data
+                  $scope.pageData = _slice($scope.rooms,1,5)
+                  _.each($scope.rooms,function(room){
+                    var building = _.find($scope.buildings,function(building){
+                      return room.building_id === building.id;
+                    })
+                    building = building || {};
+                    room.building = building;
+                  })
+                },
+                function (err){
+                  console.log(err)
+                }
+              )
           }
-        )
-      }
-		}
-	)
-      console.log(data)
-      // console.log(data)
-      
-   }
+		    }
+	     )
+    }
   )
 
-  $scope._active = function (x) {       
-    $scope.custom = $scope.pageData[x]
-    $scope.f = $scope.rooms[x].building.name+'('+$scope.rooms[x].building.location+')'
-  }
+    $scope._active = function (x) {       
+      $scope.custom = $scope.pageData[x]
+      $scope.f = $scope.rooms[x].building.name+'('+$scope.rooms[x].building.location+')'
+    }
 
-	$scope._create = function () {
-    // alert($scope.buildings[0].id)
+	  $scope._create = function () {
       setRom()
     }
     function setRom (){
-      // console.log($scope.f.id)
       apiServ.post(
         '/eqp/api/room/new',
         {
@@ -94,8 +73,7 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
           location.reload()
         },
         function(err){
-        	Prompt("创建失败")
-          // console.log(err);
+          console.log(err);
         }
       )
     }
@@ -134,13 +112,10 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
         }
       ).then(
         function(){
-        	// alert(1)
           location.reload()
-          Prompt("删除成功！")
         },
         function(err){
-        	// alert(2)
-          // console.log(err);
+          console.log(err);
         }
       )
     }
@@ -154,9 +129,8 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
       boolean = true;
     }
     document.getElementById('jxabc_building_details').onfocus=function(){
-      console.log(1)
       document.getElementsByClassName('jxabc_Droplist')[0].style.display='block';
-      // boolean = false;
+      boolean = false;
     }
     document.getElementById('jxabc_building_details').onblur=function(){
       if(boolean){
@@ -164,7 +138,6 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
       }
       document.getElementsByClassName('jxabc_Droplist')[0].style.display='none';
     }
-
 
     return {
         'setRom':setRom,
