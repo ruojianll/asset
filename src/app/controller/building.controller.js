@@ -1,8 +1,6 @@
-
-
 // 建筑 building;
 angular.module("asset").controller("budCtrl", function (accountServ, $scope, environment, apiServ) {
-
+$scope.$parent.$parent.currentPage = 1;
   getBud()
   
   // 获取建筑；

@@ -338,9 +338,13 @@ button{
 	height:36px;
 	outline:none;
 	/*margin:0 auto;*/
+<<<<<<< HEAD
 	color:#787677;
 	font-weight:bold;
 	/*margin-left:120px;*/
+=======
+	width: auto;
+>>>>>>> 7671e9576fec8b1deb881965ebcd38822bcfbcb8
 }
 .qq{
 	margin-left: 0;
@@ -403,4 +407,109 @@ button{
 	clear: both;
 	padding-top: 2rem;
 	width: 100%
+}
+.Prompt{
+    display: block;
+    position:  fixed;
+    opacity: 0;
+    width: 8rem;
+    height: auto;
+    padding: 0.4rem 0.5rem;
+    z-index: -1;
+    background: #f90;
+    top: 50%;
+    left: 50%;
+    margin-left: -4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.7rem;
+    border-radius:5px ;
+    transition: all .3s;
+    overflow: auto;
+}
+ul,ol,li{
+	list-style: none;
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+}
+
+.thumbnail img.pull-right {
+  width: 50px;
+}
+.jxabc_rooms_left{
+	display: inline-block;
+	width: 251px;
+	height: auto;
+	background: #efe4e0;
+	float: left;
+}
+.jxabc_list{
+	width: 226px;
+	height: 33px;
+	border: 1px solid #dcdcda;
+	padding: 0;
+	margin: 12px 0 0 11px;
+}
+.jxabc_list>li{
+	float:left;
+	line-height: 33px;
+	padding-left: 10px;
+	color: #3c2e3b;
+	border-right: 1px solid #dcdcda;
+	background: #fff;
+	border-bottom: 1px solid #dcdcda;
+}
+.jxabc_list>li:first-child{
+	width: 45px;
+}
+.jxabc_list>li:nth-child(2){
+	width: 75px;
+}
+.jxabc_list>li:last-child{
+	width: 104px;
+	border-right: none;
+}
+.jxabc_details{
+	width: 226px;
+	height: 33px;
+	border: 1px solid #dcdcda;
+	padding: 0;
+	margin: 0 0 0 11px;
+}
+.jxabc_details>li{
+	display: inline-block;
+	float:left;
+	height: 33px;
+	line-height: 33px;
+	padding-left: 10px;
+	color: #3c2e3b;
+	border-right: 1px solid #dcdcda;
+	background: #f5f5f5;
+	border-bottom: 1px solid #dcdcda;
+}
+.jxabc_details>li:first-child{
+	width: 45px;
+}
+.jxabc_details>li:nth-child(2){
+	width: 75px;
+}
+.jxabc_details>li:last-child{
+	width: 104px;
+	border-right: none;
+}
+.jxbig{
+	width:503px;
+	height:auto;
+	background:#f8eae7;
+	padding:15px 11px;
+	float: left;
+	margin-left: 4px;
 }
