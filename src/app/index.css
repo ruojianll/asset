@@ -134,10 +134,6 @@ body{
 .XQinfo table tr td{
 	padding-left:10px;
 }
-.XQinfo table thead {
-  font-weight: bold;
-}
-
 .main {
 	-display: flex;
 	height: auto;
@@ -150,7 +146,7 @@ body{
 	padding: 11px;
 }
 .XQinfo ul{
-	margin: 0 auto;
+	margin: 30px auto;
 }
 .main div table {
 	float: left;
@@ -195,12 +191,6 @@ body{
 	margin-left: 5px;
 	background: #f2e7e5;
 	padding: 10px;
-}
-.XQlist table tbody {
-  background-color: #fff;
-}
-.XQlist table thead {
-  font-weight: bold;
 }
 .XQlist table tr td{
 	padding-left: 10px;
@@ -304,6 +294,7 @@ body{
 	height:36px;
 	outline:none;
 	/*margin:0 auto;*/
+	margin-left: 120px;
 	width: auto;
 }
 .qq{

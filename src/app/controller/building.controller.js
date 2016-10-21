@@ -4,6 +4,7 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
   getBud()
     
   $scope.pageData=[];
+  $scope.maxSize = 3;
   function slice(arr, page,number){
     return arr.slice((page-1)*number,page*number);
   }
@@ -19,8 +20,6 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         function (data) {
           $scope.data1 = data;
           $scope.pageData=slice($scope.data1,1,5);
-        
-          
           $scope._show = function (i) {
             $scope.qq = true
             $scope.custom = $scope.pageData[i]
@@ -83,7 +82,8 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         }
       ).then(
         function(){
-          alert("修改成功！")
+          $(".form-control").val("");
+          prompt("修改成功！")
         },
         function(err){
           console.log(err);
@@ -105,7 +105,7 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         function(){
 //        $scope.data1.splice($scope.data1.indexOf(data), 1);
           location.reload()
-          alert("删除成功！")
+          prompt("删除成功！")
         },
         function(err){
           console.log(err);
