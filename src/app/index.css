@@ -47,7 +47,7 @@ body{
 	left: 0;
 	background: #fff;
 	opacity: 0.3;
-	z-index: 1
+	z-index: 1;
 }
 .login{
 	width: 80%;
@@ -89,10 +89,6 @@ body{
 	top:0;
 	left:0;
 }
-
-.XQbuilding{
-	width:90%;
-}
 .tit{
 	width:1200px;
 	height:52px;
@@ -125,9 +121,14 @@ header div {
 	margin: 0 auto;
 	height: 100%;
 }
-
+/*building start*/
+.XQbuilding{
+	width:100%;
+	height：auto;
+	overflow: hidden;
+}
 .XQinfo{
-	width:28%;
+	width:26%;
 	max-height:320px;
 	background: #f2e7e5;
 	padding: 10px;
@@ -135,27 +136,58 @@ header div {
 }
 .XQinfo table{
   background-color: #fff;
+  /*height: 224px;*/
+  width: 100%;
 }
-
 .XQhead{
 	background: #fff;
 }
-
+.XQhead tr td{
+	font-weight: bold;
+}
 .XQinfo table tr td{
 	padding-left:10px;
 }
 .XQinfo table thead {
   font-weight: bold;
 }
-
+.XQinfo ul{
+	margin: 30px 15px;
+}
 .XQedit{
-	width: 500px;
-	height:208px;
+	width:44%;
+	height:auto;
 	background: #f2e7e5;
 	float: left;
 	margin-left: 5px;
 	padding: 10px;
 }
+.XQlist{
+	width:28%;
+	height: auto;
+	background:#f2e7e5;
+	float: left;
+	margin-left: 5px;
+	padding: 10px;
+}
+.XQlist table tbody {
+  background-color: #fff;
+}
+.XQlist table thead {
+  font-weight: bold;
+}
+.XQlist table tr td{
+	padding-left: 10px;
+}
+.qq{
+	margin-left: 5px;
+	color:#787677;
+	font-weight:bold;
+	float: left;
+	padding: 10px;
+	width: auto;
+}
+/*building end*/
 header span {
 	display: inline-block;
 	width: 41px;
@@ -185,46 +217,6 @@ header p b {
 	width: 1254px;
 	height: auto;
 	margin: 31px auto 0;
-}
-.main {
-	display: flex;
-	width: 1254px;
-	height: auto;
-	margin: 0 auto;
-}
-.main>div {
-	margin-left: 4px;
-	float: left;
-	background: #f1e6e2;
-	padding: 11px;
-}
-.XQinfo ul{
-	margin: 0 auto;
-}
-.main div table {
-	float: left;
-}
-.main div table tr{
-	cursor: pointer;
-	height: 37px;
-	background: #f9f9f9;
-}
-.main div table tr:nth-child(1){
-	background: #fff;
-}
-.main div table tr:first-child {
-	font-weight: bold;
-}
-.main div table td{
-	border: 1px solid #ddd;
-	padding-left: 9px;
-}
-.main>div:nth-child(1) {
-	margin: 0;
-	width: 251px;
-	width:21%;
-	min-height: 207px;
-
 }
 
 /*页面样式*/
@@ -265,81 +257,12 @@ input{
 }
 button{
   width: auto;
-  height: 34px;
+  height: 36px;
   padding: 10px 15px;
 
 }
 .main>div:nth-child(1) ul {
 	margin: 30px 0 10px 0;
-}
-.XQedit{
-	width:44%;
-	height:auto;
-	background: #f2e7e5;
-	float: left;
-	margin-left: 5px;
-	padding: 10px;
-	width:400px; 
-	height:125px;
-	width:25%; 
-	height:auto;
-	float: left;
-	margin-left: 5px;
-	background: #f2e7e5;
-	padding: 10px;
-}
-.XQlist table tbody {
-  background-color: #fff;
-}
-.XQlist table thead {
-  font-weight: bold;
-}
-
-.XQlist table tr td{
-	padding-left: 10px;
-}
-
-.main>div:nth-child(2) {
-	width: 188px;
-	height: 122px;
-}
-.main>div:nth-child(3) {
-	width: 803px;
-	height: 207px;
-	width: 14%;
-	min-height: 100px;
-}
-.main>div:nth-child(3) {
-	width: 64%;
-	min-height: 207px;
-}
-.main>div div {
-	width: 304px;
-	float: right;
-	padding: 0;
-	position: relative; 
-}
-.main>div div h5 {
-	font-weight: bold;
-}
-.main>div div button {
-	margin-top: 6px;
-}
-.main>div div .dropdown-menu {
-	display: none;
-	top: 69px;
-}
-.main>div div ul li {
-	cursor: pointer;
-	padding: 0 14px;
-	line-height: 27px;
-}
-/* .main div div .list {
-	display: none !importment;
-} */
-.main div div .list li:hover {
-	color: #fff;
-	background: #347AB6;
 }
 .box p{
 	font-size:24px;
@@ -378,27 +301,15 @@ button{
 	height:34px;
 	outline:none;
 }
-.btn-default{
-	/*width:60px;*/
-	width:auto;
+
+.ck{
+	width:67px;
 	height:36px;
 	outline:none;
-	/*margin:0 auto;*/
 	color:#787677;
 	font-weight:bold;
-	/*margin-left:120px;*/
-	width: auto;
-	width:82px;
-	height:36px;
-	outline:none;
 	margin:0 auto;
-	/*width: auto;*/
 	display: block;
-}
-.qq{
-	margin-left: 0;
-	color:#787677;
-	font-weight:bold;
 }
 .user{
 	width: auto;
@@ -562,7 +473,16 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
-
+.jxabc_Droplist>li{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: "微软雅黑";
+	font-weight:bold;
+}
+.jxabc_Droplist>li:hover{
+	color:#D8A2A6;
+	cursor: pointer;
+}
 .fx{
 	display:inline-block;
 	width:376px;
@@ -582,3 +502,107 @@ ul,ol,li{
 	display:inline-block;
 	width:auto; 
 }
+/*assets.html样式 start*/
+.main {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.main>div {
+	margin-left: 4px;
+	float: left;
+	background: #f1e6e2;
+	padding: 11px;
+}
+.main div table {
+	width: 100%;
+	float: left;
+	width: 100%;
+}
+.main div table tr{
+	cursor: pointer;
+	height: 37px;
+	background: #f9f9f9;
+}
+.main div table tr:nth-child(1){
+	background: #fff;
+}
+.main div table tr:first-child {
+	font-weight: bold;
+}
+.main div table td{
+	border: 1px solid #ddd;
+	padding-left: 9px;
+}
+.main>div:nth-child(1) {
+	margin: 0;
+	width:21%;
+	min-height: 207px;
+
+}
+.main>div:nth-child(1) ul {
+	margin: 30px 0 10px 0;
+	width:100%;
+}
+.main>div:nth-child(2) {
+	width: 14%;
+	min-height: 122px;
+}
+.main>div:nth-child(3) {
+	width: 64%;
+	min-height: 207px;
+}
+.main>div:nth-child(3) table {
+	width: 58%;
+}
+.main>div div {
+	width: 40%;
+	float: right;
+	padding: 0;
+	position: relative; 
+}
+.main>div div h5 {
+	font-weight: bold;
+}
+.main>div div span {
+	display: flex;
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+
+}
+.main>div div button {
+		color: #7B7979;
+	height: auto;
+	padding: 8px 10px;
+	margin-top: 6px;
+	background: #F5F2F2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.main>div div .hover {
+	color: #333;
+	background: #fff;
+}
+.main>div div .hover:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.main>div div .dropdown-menu {
+	display: none;
+	top: 69px;
+}
+.main>div div ul li {
+	cursor: pointer;
+	padding: 0 14px;
+	line-height: 27px;
+}
+/* .main div div .list {
+	display: none !importment;
+} */
+.main div div .list li:hover {
+	color: #fff;
+	background: #347AB6;
+}
+
+/*assets.html样式 END*/
