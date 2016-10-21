@@ -84,7 +84,7 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
       ).then(
         function(){
           $(".form-control").val("");
-          prompt("修改成功！")
+          Prompt("修改成功！")
         },
         function(err){
           console.log(err);
@@ -105,8 +105,9 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
       ).then(
         function(){
           $(".form-control").val("")
-          location.reload()
-          prompt("删除成功！")
+          // location.reload()
+          getBud()
+          Prompt("删除成功！")
         },
         function(err){
           console.log(err);
