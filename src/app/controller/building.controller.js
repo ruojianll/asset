@@ -1,15 +1,16 @@
 // 建筑 building;
 angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope, environment, apiServ) {
   getBud()
-  $scope.$parent.$parent.currentPage = 1;
+
   $scope.pageData=[];
   $scope.maxSize = 3;
   function slice(arr, page,number){
     return arr.slice((page-1)*number,page*number);
   }
-  $scope.pagechange=function(){
-    $scope.pageData=slice($scope.data1,$scope.currentPage,5)
+  $scope.pageChange = function(){
+    $scope.pageData = _slice($scope.data1, $scope.currentPage, 5);
   }
+   
   // 获取建筑；
     function getBud () {
       apiServ.post(
@@ -58,7 +59,8 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         }
       ).then(
         function(){
-          $scope.data1.push($scope.custom);
+          $scope.data1.push($scope.custom)
+          $(".form-control").val("")
           location.reload()
         },
         function(err){
@@ -102,7 +104,7 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         }
       ).then(
         function(){
-//        $scope.data1.splice($scope.data1.indexOf(data), 1);
+          $(".form-control").val("")
           location.reload()
           prompt("删除成功！")
         },

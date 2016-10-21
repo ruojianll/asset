@@ -47,7 +47,7 @@ body{
 	left: 0;
 	background: #fff;
 	opacity: 0.3;
-	z-index: 1
+	z-index: 1;
 }
 .login{
 	width: 80%;
@@ -136,6 +136,7 @@ header div {
 }
 .XQinfo table{
   background-color: #fff;
+  height: 224px;
 }
 .XQhead{
 	background: #fff;
@@ -150,7 +151,7 @@ header div {
   font-weight: bold;
 }
 .XQinfo ul{
-	margin: 30px auto;
+	margin: 30px 15px;
 }
 .XQedit{
 	width:44%;
@@ -166,7 +167,7 @@ header div {
 	background:#f2e7e5;
 	float: left;
 	margin-left: 5px;
-	padding: 10px; 
+	padding: 10px;
 }
 .XQlist table tbody {
   background-color: #fff;
@@ -215,45 +216,6 @@ header p b {
 	height: auto;
 	margin: 31px auto 0;
 }
-.main {
-	display: flex;
-	width: 1254px;
-	height: auto;
-	margin: 0 auto;
-}
-.main>div {
-	margin-left: 4px;
-	float: left;
-	background: #f1e6e2;
-	padding: 11px;
-}
-
-.main div table {
-	float: left;
-}
-.main div table tr{
-	cursor: pointer;
-	height: 37px;
-	background: #f9f9f9;
-}
-.main div table tr:nth-child(1){
-	background: #fff;
-}
-.main div table tr:first-child {
-	font-weight: bold;
-}
-.main div table td{
-	border: 1px solid #ddd;
-	padding-left: 9px;
-}
-.main>div:nth-child(1) {
-	margin: 0;
-	width: 251px;
-	width:21%;
-	min-height: 207px;
-
-}
-
 /*页面样式*/
 .fx {
   width: 376px;
@@ -292,56 +254,12 @@ input{
 }
 button{
   width: auto;
-  height: 34px;
+  height: 36px;
   padding: 10px 15px;
 
 }
 .main>div:nth-child(1) ul {
 	margin: 30px 0 10px 0;
-}
-
-
-.main>div:nth-child(2) {
-	width: 188px;
-	height: 122px;
-}
-.main>div:nth-child(3) {
-	width: 803px;
-	height: 207px;
-	width: 14%;
-	min-height: 100px;
-}
-.main>div:nth-child(3) {
-	width: 64%;
-	min-height: 207px;
-}
-.main>div div {
-	width: 304px;
-	float: right;
-	padding: 0;
-	position: relative; 
-}
-.main>div div h5 {
-	font-weight: bold;
-}
-.main>div div button {
-	margin-top: 6px;
-}
-.main>div div .dropdown-menu {
-	display: none;
-	top: 69px;
-}
-.main>div div ul li {
-	cursor: pointer;
-	padding: 0 14px;
-	line-height: 27px;
-}
-/* .main div div .list {
-	display: none !importment;
-} */
-.main div div .list li:hover {
-	color: #fff;
-	background: #347AB6;
 }
 .box p{
 	font-size:24px;
@@ -393,6 +311,7 @@ button{
 	outline:none;
 	margin:0 auto;
 	display: block;
+<<<<<<< HEAD
 }*/
 .user{
 	width: auto;
@@ -556,3 +475,116 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
+.fx{
+	display:inline-block;
+	width:376px;
+	min-height: 207px;
+	background:#f2ede7;
+	float:left;
+}
+.m_box{
+	display:inline-block;
+	margin-left:5px;
+	width:501px;
+	min-height: 378px;
+	background:#f2ede7;
+	padding:18px 11px;
+}
+.m_box button{
+	display:inline-block;
+	width:auto; 
+}
+/*assets.html样式 start*/
+.main {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.main>div {
+	margin-left: 4px;
+	float: left;
+	background: #f1e6e2;
+	padding: 11px;
+}
+.main div table {
+	float: left;
+}
+.main div table tr{
+	cursor: pointer;
+	height: 37px;
+	background: #f9f9f9;
+}
+.main div table tr:nth-child(1){
+	background: #fff;
+}
+.main div table tr:first-child {
+	font-weight: bold;
+}
+.main div table td{
+	border: 1px solid #ddd;
+	padding-left: 9px;
+}
+.main>div:nth-child(1) {
+	margin: 0;
+	width:21%;
+	min-height: 207px;
+
+}
+.main>div:nth-child(1) ul {
+	margin: 30px 0 10px 0;
+	width:100%;
+}
+.main>div:nth-child(2) {
+	width: 14%;
+	min-height: 122px;
+}
+.main>div:nth-child(3) {
+	width: 64%;
+	min-height: 207px;
+}
+.main>div:nth-child(3) table {
+	width: 58%;
+}
+.main>div div {
+	width: 40%;
+	float: right;
+	padding: 0;
+	position: relative; 
+}
+.main>div div h5 {
+	font-weight: bold;
+}
+.main>div div button {
+	color: #7B7979;
+	margin-top: 6px;
+	background: #F5F2F2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.main>div div .hover {
+	color: #333;
+	background: #fff;
+}
+.main>div div .hover:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.main>div div .dropdown-menu {
+	display: none;
+	top: 69px;
+}
+.main>div div ul li {
+	cursor: pointer;
+	padding: 0 14px;
+	line-height: 27px;
+}
+/* .main div div .list {
+	display: none !importment;
+} */
+.main div div .list li:hover {
+	color: #fff;
+	background: #347AB6;
+}
+
+/*assets.html样式 END*/
