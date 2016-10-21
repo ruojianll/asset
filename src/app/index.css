@@ -184,6 +184,7 @@ header div {
 	font-weight:bold;
 	float: left;
 	padding: 10px;
+	width: auto;
 }
 /*building end*/
 header span {
