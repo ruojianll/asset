@@ -136,7 +136,8 @@ header div {
 }
 .XQinfo table{
   background-color: #fff;
-  height: 224px;
+  /*height: 224px;*/
+  width: 100%;
 }
 .XQhead{
 	background: #fff;
@@ -217,6 +218,7 @@ header p b {
 	height: auto;
 	margin: 31px auto 0;
 }
+
 /*页面样式*/
 .fx {
   width: 376px;
@@ -471,6 +473,16 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
+.jxabc_Droplist>li{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: "微软雅黑";
+	font-weight:bold;
+}
+.jxabc_Droplist>li:hover{
+	color:#D8A2A6;
+	cursor: pointer;
+}
 .fx{
 	display:inline-block;
 	width:376px;
@@ -505,6 +517,7 @@ ul,ol,li{
 .main div table {
 	width: 100%;
 	float: left;
+	width: 100%;
 }
 .main div table tr{
 	cursor: pointer;

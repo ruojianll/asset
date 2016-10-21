@@ -2,11 +2,11 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 	//分页
 	$scope.$parent.$parent.currentPage = 0;
 	$scope.pageData=[];
-  	function slice(arr, page,number){
+  	function _slice(arr, page,number){
     	return arr.slice((page-1)*number,page*number);
  	}
   	$scope.pagechange=function(){
-    	$scope.pageData=slice($scope.buildings,$scope.currentPage,5)
+    	$scope.pageData=_slice($scope.buildings,$scope.currentPage,5)
   	}
 
 	//获取所有财产
@@ -20,7 +20,7 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 	//获取所有建筑
 	apiServ.post('/eqp/api/building/all',{}).then(function(data){
 		$scope.buildings=data;
-		$scope.pageData=slice($scope.buildings,1,5);
+		$scope.pageData=_slice($scope.buildings,1,5);
 	})
 
 	$scope.flag1=false;
