@@ -168,7 +168,7 @@ header div {
 
 .XQlist{
   width:20.5rem; 
-  height:125px;
+  height:auto;
   float: left;
   margin-left: 5px;
   background: #f2e7e5;
@@ -182,6 +182,13 @@ header div {
 }
 .XQlist table tr td{
   padding-left: 10px;
+}
+.qq{
+  width: auto;
+  float: left;
+  margin-right: 10px;
+  color:#787677;
+  font-weight:bold;
 }
 /* XQbuilding 结束 */
 
@@ -227,9 +234,7 @@ header p b {
 	background: #f1e6e2;
 	padding: 11px;
 }
-.XQinfo ul{
-	margin: 0 auto;
-}
+
 .main div table {
 	float: left;
 }
@@ -398,15 +403,7 @@ button{
 	/*width: auto;*/
 	display: block;
 }
-.qq{
-	margin-left: 0;
-	color:#787677;
-	font-weight:bold;
-	width: auto;
-}
-.qq{
-  margin-left: 0;
-}
+
 .user{
 	width: auto;
 	height: 100%;
