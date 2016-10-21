@@ -97,6 +97,7 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 
 	}
 	$scope.creat=function(){
+		alert(0)
 		var asset_number=$('#num').val();
 		apiServ.post('/eqp/api/asset/new',{equipment_id:$scope.equipment.id,
 	    room_id:$scope.room_id,
