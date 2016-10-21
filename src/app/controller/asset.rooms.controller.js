@@ -6,9 +6,6 @@ angular.module('asset').controller("assetRooms",function($scope,$http,environmen
   $scope.pageChange = function(){
     $scope.pageData = _slice($scope.rooms, $scope.currentPage, 5); 
   }
-
-  apiServ.post(
-   '/eqp/api/room/all',
   $scope.$parent.$parent.currentPage = 2;
 	apiServ.post(
 		'/eqp/api/room/all',

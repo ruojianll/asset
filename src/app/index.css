@@ -23,7 +23,7 @@ body{
 	position: relative;
 	z-index: 666;
 }
-.login a{
+.login .pic{
 	display: block;
 	width: 4rem;
 	position: relative;
@@ -74,7 +74,7 @@ body{
 	float:left;
 	margin-top:10px;
 }
-.tit a{
+.tit div{
 	display:block;
 	float:right;
 	line-height:52px;
@@ -273,14 +273,16 @@ header p b {
 	text-align:center;
 }
 .txt{
-	width:300px;
+	width:80%;
 	height:150px;
 	margin:150px auto;
 
 }
 .txt span{
 	display:block;
+	width:300px;
 	margin-bottom:12px;
+	margin:0 auto 12px auto;
 	background:#787677;
 	font-size:14px;
 	font-weight:bold;
@@ -304,11 +306,17 @@ header p b {
 	width:82px;
 	height:36px;
 	outline:none;
+	margin:0 auto;
+	/*width: auto;*/
+	display: block;
+}
+.qq{
+	margin-left: 0;
 	color:#787677;
 	font-weight:bold;
 }
 .user{
-	width: 8rem;
+	width: auto;
 	height: 100%;
 	float: right;
 	padding-right: 2rem;
@@ -316,6 +324,7 @@ header p b {
 	line-height: 5rem;
 	font-weight: bold;
 	color: blue;
+	cursor: pointer;
 }
 .blueColor{
 	color: blue;

@@ -24,7 +24,7 @@ $scope.dian=false;
             }
         },
         function (err){
-        	alert(2)
+//      	alert(2)
             console.log(err)
         }
     )
