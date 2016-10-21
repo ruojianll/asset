@@ -1,7 +1,7 @@
 angular.module('asset').controller('menu',function($scope,$state){
-	if(boolean){
-		$state.go("signIn.assets");
-	}
+//	if(boolean){
+//		$state.go("signIn.assets");
+//	}
 		// $(window).load(function(){
 		// 	alert(1)
 		// 	var url = window.location.href;
