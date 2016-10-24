@@ -5,11 +5,11 @@
   angular
     .module('asset')
     .config(routerConfig);
-
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
 
 		$urlRouterProvider.otherwise('/index');
+    // $urlRouterProvider.when("","/index")//默认显示页面
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'app/template/login2.template.html',

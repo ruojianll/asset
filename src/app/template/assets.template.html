@@ -11,9 +11,8 @@
 				<td>{{i.location}}</td>   
 			</tr>
 		</table>
-    	<!-- <ul uib-pagination total-items="buildings.length" ng-model="currentPage" ng-change="pagechange()" items-per-page="6" ></ul> -->
 
-    	<ul uib-pagination boundary-links="true" max-size='3' total-items="buildings.length" ng-change="pagechange()" items-per-page="6" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+    	<ul uib-pagination boundary-links="true" max-size='2' total-items="buildings.length" ng-change="pagechange()" items-per-page="6" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
 	</div>
 	<div ng-show="flag1">
 		<table>
@@ -51,9 +50,12 @@
 
 		    <h5>number</h5>
 		    <input type="text" ng-model="selected" class="form-control" id="num">
-		    <button type="button" ng-click="edit()" ng-disabled="isDisabled">Edit(:)</button>     
-		    <button type="button" ng-click="delete()" ng-disabled="isDisabled">Delete(:)</button>
-		    <button type="button" ng-click="creat()" class="hover">Create</button>
+		    <span>
+		    	<button type="button" ng-click="edit()" ng-disabled="isDisabled">Edit</button>     
+			    <button type="button" ng-click="delete()" ng-disabled="isDisabled">Delete</button>
+			    <button type="button" ng-click="creat()" class="hover">Create</button>
+		    </span>
+		    
 		</div>
 	</div>
 </section>

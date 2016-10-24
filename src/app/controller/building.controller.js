@@ -1,7 +1,7 @@
 // 建筑 building;
 angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope, environment, apiServ) {
   getBud()
-
+  $scope.$parent.$parent.currentPage = 1;
   $scope.pageData=[];
   $scope.maxSize = 3;
   function _slice(arr, page,number){
@@ -20,6 +20,7 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         function (data) {
           $scope.data1 = data;
           $scope.pageData=_slice($scope.data1,1,5);
+          
           $scope._show = function (i) {
             $scope.qq = true
             $scope.custom = $scope.pageData[i]
@@ -61,7 +62,7 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         function(){
           $scope.data1.push($scope.custom)
           $(".form-control").val("")
-          location.reload()
+          getBud()
         },
         function(err){
           console.log(err);
@@ -105,7 +106,6 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
         }
       ).then(
         function (data) {
-          console.log(data)
           for (var i=0; i<data.length; i++) {
             dele_room(data[i].id)
           }
@@ -118,7 +118,9 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
           ).then(
             function () {
               $(".form-control").val("")
-              location.reload()
+              $scope.custom = ""
+              $scope.qq = false
+              getBud()
               Prompt("删除成功！")
             },
             function (err) {
