@@ -125,7 +125,7 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 	}
 	document.getElementById('name').onfocus=function(){
 		document.getElementsByClassName('list')[0].style.display='block';
-		// boolean = false;
+		boolean = false;
 	}
 	document.getElementById('name').onblur=function(){
 		if(boolean){
@@ -133,6 +133,5 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		}
 		document.getElementsByClassName('list')[0].style.display='none';
 	}
-
 
 })
