@@ -1,7 +1,7 @@
 // 建筑 building;
 angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope, environment, apiServ) {
   getBud()
-
+  $scope.$parent.$parent.currentPage = 1;
   $scope.pageData=[];
   $scope.maxSize = 3;
   function _slice(arr, page,number){
