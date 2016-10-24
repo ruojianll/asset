@@ -13,7 +13,11 @@ angular.module('asset').service('accountServ',function(environment,$http,apiServ
 				$state.go("signIn.assets");
 	        },
 	        function(err){
-	
+				var oDebug=document.getElementById('debug');
+				oDebug.style.display='block';
+				oDebug.onclick=function(){
+					oDebug.style.display='none';
+				}
 	        }
         )
     }

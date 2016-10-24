@@ -136,7 +136,8 @@ header div {
 }
 .XQinfo table{
   background-color: #fff;
-  height: 224px;
+  /*height: 224px;*/
+  width: 100%;
 }
 .XQhead{
 	background: #fff;
@@ -217,6 +218,7 @@ header p b {
 	height: auto;
 	margin: 31px auto 0;
 }
+
 /*页面样式*/
 .fx {
   width: 376px;
@@ -309,6 +311,27 @@ button{
 	margin:0 auto;
 	display: block;
 }
+.debug{
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.4);
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+.debug div{
+	width: 26%;
+	height:80px;
+	line-height:40px;
+	position: absolute;
+	top: 38%;
+	left: 42%;
+	background: #fff;
+	text-align:center;
+	color:#666;
+	border-radius:8.5px;
+}
 .user{
 	width: auto;
 	height: 100%;
@@ -393,13 +416,16 @@ ul,ol,li{
 	height: auto;
 	background: #efe4e0;
 	float: left;
+	padding: 11px;
 }
 .jxabc_list{
+	cursor: pointer;
+	display: flex;
 	width: 226px;
 	height: 33px;
 	border: 1px solid #dcdcda;
 	padding: 0;
-	margin: 12px 0 0 11px;
+	margin: 0;
 }
 .jxabc_list>li{
 	float:left;
@@ -421,11 +447,13 @@ ul,ol,li{
 	border-right: none;
 }
 .jxabc_details{
+	cursor: pointer;
+	display: flex;
 	width: 226px;
 	height: 33px;
 	border: 1px solid #dcdcda;
 	padding: 0;
-	margin: 0 0 0 11px;
+	margin: 0;
 }
 .jxabc_details>li{
 	display: inline-block;
@@ -471,6 +499,16 @@ ul,ol,li{
 	display: none;
 	padding-left: 15px;
 }
+.jxabc_Droplist>li{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: "微软雅黑";
+	font-weight:bold;
+}
+.jxabc_Droplist>li:hover{
+	color:#D8A2A6;
+	cursor: pointer;
+}
 .fx{
 	display:inline-block;
 	width:376px;
@@ -503,7 +541,9 @@ ul,ol,li{
 	padding: 11px;
 }
 .main div table {
+	width: 100%;
 	float: left;
+	width: 100%;
 }
 .main div table tr{
 	cursor: pointer;
@@ -550,8 +590,16 @@ ul,ol,li{
 .main>div div h5 {
 	font-weight: bold;
 }
+.main>div div span {
+	display: flex;
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+
+}
 .main>div div button {
-	color: #7B7979;
+		color: #7B7979;
+	height: auto;
+	padding: 8px 10px;
 	margin-top: 6px;
 	background: #F5F2F2;
     border: 1px solid #ccc;
@@ -575,9 +623,6 @@ ul,ol,li{
 	padding: 0 14px;
 	line-height: 27px;
 }
-/* .main div div .list {
-	display: none !importment;
-} */
 .main div div .list li:hover {
 	color: #fff;
 	background: #347AB6;
