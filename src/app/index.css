@@ -141,15 +141,13 @@ header div {
 }
 .XQhead{
 	background: #fff;
+	font-weight: bold;
 }
 .XQhead tr td{
 	font-weight: bold;
 }
 .XQinfo table tr td{
 	padding-left:10px;
-}
-.XQinfo table thead {
-  font-weight: bold;
 }
 .XQinfo ul{
 	margin: 30px 15px;

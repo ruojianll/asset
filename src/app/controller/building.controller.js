@@ -84,7 +84,8 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
       ).then(
         function(){
           $(".form-control").val("");
-          prompt("修改成功！")
+          getBud()
+          Prompt("修改成功！")
         },
         function(err){
           console.log(err);
@@ -92,24 +93,58 @@ angular.module("asset").controller("budCtrl", function ($log,accountServ, $scope
       )
     }
     
-    // 删除建筑；
+    // 删除建筑和建筑内的房间；
     $scope._delete = function () {
       delBud()
     }
-    function delBud (data){
+    function delBud (){
       apiServ.post(
-        '/eqp/api/building/delete',
+        '/eqp/api/building/room/all',
         {
           'building_id': $scope.custom.id
         }
       ).then(
-        function(){
-          $(".form-control").val("")
-          location.reload()
-          prompt("删除成功！")
+        function (data) {
+          console.log(data)
+          for (var i=0; i<data.length; i++) {
+            dele_room(data[i].id)
+          }
+          
+          apiServ.post(
+            '/eqp/api/building/delete',
+            {
+              'building_id': $scope.custom.id
+            }
+          ).then(
+            function () {
+              $(".form-control").val("")
+              location.reload()
+              Prompt("删除成功！")
+            },
+            function (err) {
+              
+            }
+          )
         },
         function(err){
           console.log(err);
+        }
+      )
+    }
+    
+    // 删除房间；
+    function dele_room (room_id) {
+      apiServ.post(
+        '/eqp/api/room/delete',
+        {
+          'room_id': room_id
+        }
+      ).then(
+        function () {
+          
+        },
+        function (err) {
+          
         }
       )
     }

@@ -18,11 +18,11 @@
 	<div class="XQedit">
 		<div class="form-group">
 	      <label>Name</label>
-	      <input type="text" class="form-control" ng-model = 'custom.name' value = '{{custom.name}}'>
+	      <input type="text" class="form-control" ng-model = 'custom.name'>
 	    </div>
 	    <div class="form-group">
 	      <label>Location</label>
-	      <input type="text" class="form-control" ng-model = 'custom.location' value = '{{custom.location}}'>
+	      <input type="text" class="form-control" ng-model = 'custom.location'>
 	    </div>
 	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default qq" ng-click = '_edit()'>Edit({{custom.id+":"+custom.name}})</button>
 	    <button uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" t15]ype="button" class="btn btn-default qq" ng-click = '_delete()'>Delete({{custom.id+":"+custom.name}})</button>
