@@ -6,5 +6,4 @@
     .module('asset')
     .constant('malarkey', malarkey)
     .constant('moment', moment)
-
 })();
