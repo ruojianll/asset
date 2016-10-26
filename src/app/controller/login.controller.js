@@ -5,6 +5,5 @@ angular.module('asset').controller("login",function(environment,accountServ,$sco
 		accountServ.login();
 		document.getElementById('log').style.display='none';
 		document.getElementById('out').style.display='block';
-		
 	})
 });
