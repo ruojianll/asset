@@ -25,7 +25,7 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 
 	$scope.flag1=false;
 	$scope.flag2=false;
-	
+	$scope.flag=false;
 	//获取建筑内的房间
 	$scope.show1=function(index){
 		$scope.building_id=$scope.buildings[index].id;
@@ -58,6 +58,7 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 				}
 			}
 			$scope.equipments=data;
+			console.log($scope.equipments)
 		})
 	}
 	//修改财产
@@ -69,6 +70,9 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		$scope.num=$scope.r_equipment.number;
 		$('#num').val($scope.num);
 		$scope.isDisabled=false;
+		var n=document.getElementById('name')
+		n.setAttribute('readonly',true);
+		$scope.flag=true;
 
 		$('.main div:eq(2) div button').not('button:eq(2)').addClass('hover');
 		
@@ -80,6 +84,8 @@ angular.module('asset').controller('assetsController',function($scope,environmen
     		room_id:$scope.room_id,
     		asset_number:asset_number}).then(function(data){
     			$scope.show2(0);
+    			n.removeAttribute('readonly');
+    			$scope.flag=false;
     			Prompt('修改成功')
     			$('#name').val('');
 				$('#num').val('');
@@ -90,6 +96,8 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 			apiServ.post('/eqp/api/asset/delete',{asset_id:$scope.asset_id}).then(function(data){
     			Prompt('已删除');
     			$scope.show2(0);
+    			n.removeAttribute('readonly');
+    			$scope.flag=false;
     			$('#name').val('');
 				$('#num').val('');
 			})
@@ -124,6 +132,9 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		boolean = true;
 	}
 	document.getElementById('name').onfocus=function(){
+		if($scope.flag==true){
+			return false;
+		}
 		document.getElementsByClassName('list')[0].style.display='block';
 		boolean = false;
 	}
@@ -133,5 +144,7 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		}
 		document.getElementsByClassName('list')[0].style.display='none';
 	}
+	
+	
 
 })

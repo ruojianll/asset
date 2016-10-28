@@ -7,11 +7,10 @@ getE()
   }
   $scope.pageChange = function(){
     $scope.pageData = _slice($scope.f, $scope.curPage, 5); 
-  }  
+  }
   $scope.$parent.$parent.currentPage = 3;
 
   var input=document.getElementsByTagName('input')
-
 //获取所有设备
 $scope.dian=false;
   function getE(){
