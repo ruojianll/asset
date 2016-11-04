@@ -144,7 +144,5 @@ angular.module('asset').controller('assetsController',function($scope,environmen
 		}
 		document.getElementsByClassName('list')[0].style.display='none';
 	}
-	
-	
 
 })
